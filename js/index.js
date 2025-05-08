@@ -27,12 +27,10 @@ const $mobileModalAboutButton = $('.mobileModalAboutButton');
 $mobileModalDiv.hide();
 
 if (isMobile) {
-  // 모바일 모드일 때
   $aboutButton.hide();
   $mainButton.hide();
   $mobileModalOpenButton.show();
 
-  // 모바일 모달 열기 버튼 클릭 이벤트
   $mobileModalOpenButton.on('click', function () {
     $mobileModalCloseButton.show();
     $mobileModalMainButton.show();
@@ -40,7 +38,6 @@ if (isMobile) {
     $mobileModalDiv.slideDown();
   });
 
-  // 모바일 모달 닫기 버튼 클릭 이벤트
   $mobileModalCloseButton.on('click', function () {
     $mobileModalCloseButton.hide();
     $mobileModalMainButton.hide();
@@ -55,6 +52,5 @@ if (isMobile) {
     window.location.href = `../about.html`;
   });
 } else {
-  // PC 모드일 때
   $mobileModalOpenButton.hide();
 }
