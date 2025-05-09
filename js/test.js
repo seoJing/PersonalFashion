@@ -77,7 +77,7 @@ const toResultPage = () => {
     recomendStyleArr = Object.entries(personalityScores).sort(
       (a, b) => b[1] - a[1]
     );
-    window.location.href = `../result.html?data=${btoa(
+    window.location.href = `./result.html?data=${btoa(
       JSON.stringify(recomendStyleArr)
     )}`;
   });
