@@ -5,15 +5,15 @@ const mainButton = document.body.querySelector('.mainButton');
 const isMobile = window.matchMedia('(pointer: coarse)').matches;
 if (startButton != null) {
   startButton.addEventListener('click', () => {
-    window.location.href = `../test.html`;
+    window.location.href = `./test.html`;
   });
 }
 
 aboutButton.addEventListener('click', () => {
-  window.location.href = `../about.html`;
+  window.location.href = `./about.html`;
 });
 mainButton.addEventListener('click', () => {
-  window.location.href = `../index.html`;
+  window.location.href = `./index.html`;
 });
 
 const $mobileModalDiv = $('.mobileModalDiv');
