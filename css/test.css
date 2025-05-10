@@ -1,3 +1,5 @@
+
+
 .hero {
   background-color: #ffffff;
   border-radius: 10px;
@@ -8,10 +10,13 @@
   flex-direction: column;
   flex: 4 0;
   gap: 10px;
+  min-height:500px;
 }
 
 .heroBox {
-  width: 30vw;
+  margin:5%;
+  width: 75%;
+  height:80%;
   background-color: #ffffff;
   border-color: black;
   border-radius: 10px;
@@ -20,10 +25,9 @@
   text-align: center;
   flex-direction: column; /* 세로로 배치 */
   justify-content: flex-start;
-  gap: 15px;
 }
 .question {
-  padding-top: 10%;
+  margin:5%;
   font-size: 150%;
   font-weight: bold;
 }
@@ -71,14 +75,6 @@
   background-color: #08404b;
   transform: translateY(-2px);
 }
-.progressDiv {
-  background-color: #0d6475;
-  flex: 2 0;
-  height: 30vh;
-  position: sticky;
-  top: 30%;
-}
-
 #main-section {
   display: flex;
   justify-content: center;
@@ -104,6 +100,14 @@
 }
 html {
   scroll-behavior: smooth;
+}
+.progressDiv {
+  margin-left:5%;
+  background-color: #1ca2bd;
+  flex: 2 0;
+  height: 80vh;
+  position: sticky;
+  top: 15%;
 }
 .progressBarWrapper {
   width: 100%;
