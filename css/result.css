@@ -72,15 +72,9 @@
   }
 } 여기까지 스위퍼*/
 
-body, html {
-  margin: 0;
-  padding: 0;
-  height:100%;
-  box-sizing: border-box;
-  font-family: 'Noto Sans KR', sans-serif;
-  overflow-y:scroll;
+.nav,.aside{
+  display:none; /*사이드바 임시 숨김*/
 }
-
 .hero {
   display:flex;
   position: relative;
