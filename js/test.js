@@ -1,64 +1,76 @@
 import { questionArr, personalityScores } from './db.js';
 import { createElement } from './createElementHelper.js';
+import { PATH } from './path.js';
 
-const selectButton1 = document.body.querySelector('.selectButton1');
-const selectButton2 = document.body.querySelector('.selectButton2');
 const progressUl = document.body.querySelector('.progressUl');
 const progressDiv = document.body.querySelector('.progressDiv');
 
-const hero = document.body.querySelector('.hero');
-
 let selectedIndexes = Array(questionArr.length).fill(null);
-let currentQuestionNumber = 0;
-let currentScroll = 500;
 let recomendStyleArr;
+let swiper;
 
-const nextQuestion = () => {
-  const heroBox = createElement(
-    'div',
-    'heroBox',
-    '',
-    `heroBox${currentQuestionNumber}`
-  );
-  const question = createElement('div', 'question');
-  const questionNumberSpan = createElement(
-    'h4',
-    'questionNumberSpan',
-    'Q' + (currentQuestionNumber + 1)
-  );
-  const questionTextSpan = createElement(
-    'span',
-    'questionTextSpan',
-    questionArr[currentQuestionNumber].questionText
-  );
+const initSwiper = () => {
+  const swiperWrapper = document.querySelector('.swiper-wrapper');
 
-  const selectButton = createElement('div', 'selectButton');
-  const selectButton1 = createElement(
-    'button',
-    ['selectButton1', `qusetion${currentQuestionNumber + 1}`],
-    questionArr[currentQuestionNumber].option[0].text
-  );
-  const selectButton2 = createElement(
-    'button',
-    ['selectButton2', `qusetion${currentQuestionNumber + 1}`],
-    questionArr[currentQuestionNumber].option[1].text
-  );
+  questionArr.forEach((item, index) => {
+    const slide = createElement('div', 'swiper-slide', '', `slide${index}`);
 
-  selectButton1.addEventListener('click', (e) => handleButtonClick(0, e));
-  selectButton2.addEventListener('click', (e) => handleButtonClick(1, e));
+    const question = createElement('div', 'question');
+    const questionNumberSpan = createElement(
+      'h4',
+      'questionNumberSpan',
+      'Q' + (index + 1)
+    );
+    const questionTextSpan = createElement(
+      'span',
+      'questionTextSpan',
+      item.questionText
+    );
 
-  question.append(questionNumberSpan, questionTextSpan);
-  selectButton.append(selectButton1, selectButton2);
-  heroBox.append(question, selectButton);
+    const selectButtonDiv = createElement('div', 'selectButtonDiv');
+    const selectButton1 = createElement(
+      'button',
+      ['selectButton1', `question${index}`],
+      item.option[0].text
+    );
+    const selectButton2 = createElement(
+      'button',
+      ['selectButton2', `question${index}`],
+      item.option[1].text
+    );
 
-  hero.appendChild(heroBox);
-  window.scrollTo({
-    top: currentScroll,
-    left: 0,
-    behavior: 'smooth', // 부드럽게 스크롤
+    selectButton1.addEventListener('click', (e) =>
+      handleButtonClick(0, e, index)
+    );
+    selectButton2.addEventListener('click', (e) =>
+      handleButtonClick(0, e, index)
+    );
+
+    question.append(questionNumberSpan, questionTextSpan);
+    selectButtonDiv.append(selectButton1, selectButton2);
+    slide.append(question, selectButtonDiv);
+
+    swiperWrapper.appendChild(slide);
   });
-  currentScroll += 700;
+
+  swiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    slidesPerView: 3,
+    centeredSlides: true,
+    slideToClickedSlide: true,
+    spaceBetween: 50,
+    mousewheel: true,
+    keyboard: {
+      enabled: true,
+    },
+    on: {
+      slideChange: function () {
+        updateProgress();
+      },
+    },
+  });
 };
+
 const toResultPage = () => {
   const toResultPageButton = createElement(
     'button',
@@ -68,45 +80,47 @@ const toResultPage = () => {
 
   toResultPageButton.addEventListener('click', () => {
     selectedIndexes.forEach((optionIndex, i) => {
-      const impact = questionArr[i].option[optionIndex].impact;
-      Object.keys(impact).forEach((key) => {
-        personalityScores[key] += impact[key];
-      });
+      if (optionIndex !== null) {
+        const impact = questionArr[i].option[optionIndex].impact;
+        Object.keys(impact).forEach((key) => {
+          personalityScores[key] += impact[key];
+        });
+      }
     });
 
     recomendStyleArr = Object.entries(personalityScores).sort(
       (a, b) => b[1] - a[1]
     );
-    window.location.href = `./result.html?data=${btoa(
+    window.location.href = `${PATH.RESULT}?data=${btoa(
       JSON.stringify(recomendStyleArr)
     )}`;
   });
 
   progressDiv.appendChild(toResultPageButton);
 };
-const handleButtonClick = (optionIndex, e) => {
+
+const handleButtonClick = (optionIndex, e, slideIndex) => {
   e.target.classList.add('selected');
   if (e.target.nextElementSibling != null)
     e.target.nextElementSibling.classList.remove('selected');
   else if (e.target.previousElementSibling != null)
     e.target.previousElementSibling.classList.remove('selected');
 
-  let clickIndex = e.target.classList[1].slice(8);
-  if (selectedIndexes[clickIndex - 1] === null) {
-    if (currentQuestionNumber < questionArr.length - 1) {
-      currentQuestionNumber++;
-      nextQuestion();
-    } else {
+  selectedIndexes[slideIndex] = optionIndex;
+
+  const progressLi = document.querySelector(`.progressLi${slideIndex}`);
+  progressLi.classList.add('answered');
+  updateProgress();
+
+  if (slideIndex < questionArr.length - 1) {
+    swiper.slideNext();
+  } else {
+    if (!document.querySelector('.toResultPageButton')) {
       toResultPage();
     }
   }
-
-  selectedIndexes[clickIndex - 1] = optionIndex;
-  const progressLi = document.querySelector(`.progressLi${clickIndex - 1}`);
-  progressLi.classList.add('answered');
-
-  updateProgress();
 };
+
 const createProgressLi = () => {
   questionArr.forEach((e, i) => {
     const li = createElement('li', `progressLi${i}`);
@@ -117,13 +131,19 @@ const createProgressLi = () => {
       '',
       i
     );
-    const a = createElement('a', `progressA${i}`, '', '', i, `#heroBox${i}`);
+    const a = createElement('a', `progressA${i}`, '', '', i, `#slide${i}`);
+
+    a.addEventListener('click', (event) => {
+      event.preventDefault();
+      swiper.slideTo(i);
+    });
+
     a.appendChild(text);
     li.appendChild(a);
-
     progressUl.appendChild(li);
   });
 };
+
 const updateProgress = () => {
   const answeredCount = selectedIndexes.filter((i) => i !== null).length;
   const total = questionArr.length;
@@ -132,8 +152,9 @@ const updateProgress = () => {
   $('.progressBar').css('width', percent + '%');
   $('.progressPercent').text(percent + '%');
 };
-//실행부
 
-selectButton1.addEventListener('click', (e) => handleButtonClick(0, e));
-selectButton2.addEventListener('click', (e) => handleButtonClick(1, e));
-createProgressLi();
+// 초기화 및 실행
+document.addEventListener('DOMContentLoaded', () => {
+  createProgressLi();
+  initSwiper();
+});

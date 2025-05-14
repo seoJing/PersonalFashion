@@ -6,6 +6,10 @@
     <title>PersonalFashion/test</title>
     <link rel="stylesheet" href="css/css.css" />
     <link rel="stylesheet" href="css/test.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header id="main-header" class="header">
@@ -19,38 +23,36 @@
         <button class="mobileModalOpenButton">모달</button>
       </div>
     </header>
-    <div class="container">
-      <section id="main-section" class="section">
-        <div class="leftSpace">
-          여백공간
+    <section id="main-section" class="section">
+      <section class="hero">
+        <!-- Swiper 구조로 변경 -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- 여기에 swiper-slide들이 JS로 추가됨 -->
+          </div>
         </div>
-        <section class="hero">
-          <div class="heroBox" id="heroBox0">
-            <div class="question">
-              <span class="questionNumberSpan"><h3>Q1</h3></span>
-              <span class="questionTextSpan"
-                ><h4>
-                  나는 셔츠를 입으면 너무 차려입은 것 같아 불편하다.
-                </h4></span
-              >
-            </div>
-            <div class="selectButton">
-              <button class="selectButton1 question1">그렇다</button>
-              <button class="selectButton2 question1">아니다</button>
-            </div>
-          </div>
-        </section>
-        <section class="progressDiv">
-          <div class="progressDetail"><h5>이미 선택한 질문을 클릭하면 되돌릴 수 있습니다!</h5></div>
-          <ul class="progressUl"></ul>
-          <div class="progressBarWrapper">
-            <div class="progressBar"></div>
-          </div>
-          <span class="progressPercent">0%</span>
-        </section>
       </section>
-    </div>
-    <footer id="main-footer" class="footer">f</footer>
+      <section class="progressDiv">
+        <div class="progressDetail">
+          <h5>이미 선택한 질문을 클릭하면 되돌릴 수 있습니다!</h5>
+        </div>
+        <ul class="progressUl"></ul>
+        <div class="progressBarWrapper">
+          <div class="progressBar"></div>
+        </div>
+        <span class="progressPercent">0%</span>
+      </section>
+    </section>
+    <footer id="main-footer" class="footer">
+      <div>
+        <h4 class="teamList">조원 목록</h4>
+        <p class="god">조장 : 202211461 서진규</p>
+        <p class="slave">
+          조원 : 202211412 김동현<br />
+          조원 : 202211549 황호찬
+        </p>
+      </div>
+    </footer>
     <div class="mobileModalDiv">
       <button class="mobileModalCloseButton">모달</button>
       <button class="mobileModalMainButton">메인</button>
@@ -59,5 +61,6 @@
     <script type="module" src="js/test.js"></script>
     <script type="module" src="js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>

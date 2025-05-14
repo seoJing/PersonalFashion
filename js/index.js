@@ -1,3 +1,5 @@
+import { PATH } from './path.js';
+
 const startButton = document.body.querySelector('.startButton');
 const aboutButton = document.body.querySelector('.aboutButton');
 const mainButton = document.body.querySelector('.mainButton');
@@ -46,13 +48,11 @@ if (isMobile) {
   });
 
   $mobileModalMainButton.on('click', function () {
-    window.location.href = `../index.html`;
+    window.location.href = `${PATH.INDEX}`;
   });
   $mobileModalAboutButton.on('click', function () {
-    window.location.href = `../about.html`;
+    window.location.href = `${PATH.ABOUT}`;
   });
 } else {
   $mobileModalOpenButton.hide();
 }
-//예시ㅇ에시 이빈다
-//예시ㅇ에시 이빈다

@@ -1,8 +1,5 @@
-
-
 const questionArr = [
   {
-    img: 'htpasd/asdcxz/dasd',
     questionNum: 1,
     questionText: '첫 만남에서 셔츠를 입고 나간다면?',
     option: [
@@ -17,7 +14,6 @@ const questionArr = [
     ],
   },
   {
-    img: 'htpasd/asdcxz/dasd',
     questionNum: 2,
     questionText: '신입생 오티날 청바지, 맨투맨 어떻게 생각해?',
     option: [
@@ -32,152 +28,142 @@ const questionArr = [
     ],
   },
   {
-    img: 'path/to/image1',
     questionNum: 3,
-    questionText: '오늘 너의 기분은 어떤 색깔일까?',
+    questionText: '무난한 검정색 바지를 입었는데, 마무리는 뭐로 할까?',
     option: [
       {
-        text: '차분한 네이비',
-        impact: { C: 1, S: 0, F: 0, A: 2 },
+        text: '로퍼나 더비, 첼시부츠 같은 가죽 구두',
+        impact: { C: 0, S: 0, F: 2, A: 1 },
       },
       {
-        text: '강렬한 레드',
-        impact: { C: 0, S: 2, F: 1, A: 0 },
+        text: '나이키, 아디다스 같은 운동화',
+        impact: { C: 2, S: 1, F: 0, A: 0 },
       },
     ],
   },
   {
-    img: 'path/to/image2',
     questionNum: 4,
-    questionText: '만약에 시간을 돌릴 수 있다면, 어떤 시대의 패션을 입어볼래?',
+    questionText: '평소에 자주 손이 가는 애착 가방이 있다면?',
     option: [
       {
-        text: '1970년대 히피 스타일',
-        impact: { C: 0, S: 2, F: 1, A: 0 },
+        text: '백팩이나 크로스백 같은 실용적인 가방',
+        impact: { C: 2, S: 1, F: 0, A: 0 },
       },
       {
-        text: '90년대 스트리트웨어',
-        impact: { C: 2, S: 0, F: 0, A: 1 },
+        text: '토트백이나 클러치 같은 스타일리시한 가방',
+        impact: { C: 0, S: 0, F: 2, A: 1 },
       },
     ],
   },
   {
-    img: 'path/to/image3',
     questionNum: 5,
-    questionText: '너의 아침 루틴에서 가장 중요한 요소는?',
+    questionText: '날이 좀 추워지면, 가장 먼저 생각나는 아우터는?',
     option: [
       {
-        text: '간편하고 빠르게',
-        impact: { C: 2, S: 0, F: 0, A: 1 },
+        text: '트렌치코트나 테일러드 자켓 같은 세련된 아우터',
+        impact: { C: 0, S: 0, F: 2, A: 1 },
       },
       {
-        text: '세심하고 완벽하게',
-        impact: { C: 0, S: 2, F: 1, A: 0 },
+        text: '후드티나 바람막이, 플리스 같은 편안한 아우터',
+        impact: { C: 2, S: 1, F: 0, A: 0 },
       },
     ],
   },
   {
-    img: 'path/to/image4',
     questionNum: 6,
-    questionText: '어떤 음악을 듣고 싶을 때, 어떤 스타일의 옷을 입고 싶어?',
+    questionText: '갑작스럽게 친구가 나오라고 할 때?',
     option: [
       {
-        text: '랩/힙합',
-        impact: { C: 0, S: 2, F: 0, A: 1 },
+        text: '간단하게 후드티나 입고 나가자',
+        impact: { C: 2, S: 0, F: 0, A: 0 },
       },
       {
-        text: '인디/록',
+        text: '이왕 나가는 거 예쁘게 입자',
         impact: { C: 0, S: 2, F: 1, A: 2 },
       },
     ],
   },
   {
-    img: 'path/to/image5',
     questionNum: 7,
-    questionText: '내일의 날씨가 어떤 스타일의 옷을 선택하게 할까?',
+    questionText: '옷장을 열었을 때, 가장 많은 아이템은?',
     option: [
       {
-        text: '비가 오면 우산이 필수',
-        impact: { C: 1, S: 0, F: 0, A: 2 },
+        text: '기본템',
+        impact: { C: 1, S: 0, F: 2, A: 0 },
       },
       {
-        text: '맑은 날씨엔 시원하게',
-        impact: { C: 0, S: 2, F: 1, A: 0 },
+        text: '개성템',
+        impact: { C: 0, S: 2, F: 0, A: 1 },
       },
     ],
   },
   {
-    img: 'path/to/image6',
     questionNum: 8,
-    questionText: '너의 하루를 대표하는 단어는?',
+    questionText: '오늘 하루의 나를 표현하는 단어를?',
     option: [
       {
-        text: '도전적이고 활동적인',
-        impact: { C: 2, S: 0, F: 1, A: 0 },
-      },
-      {
-        text: '편안하고 여유로운',
-        impact: { C: 0, S: 2, F: 0, A: 1 },
-      },
-    ],
-  },
-  {
-    img: 'path/to/image7',
-    questionNum: 9,
-    questionText: '만약 한 공간에 계속 살아야 한다면, 어떤 장소에서 살고 싶어?',
-    option: [
-      {
-        text: '도시의 중심에서',
-        impact: { C: 2, S: 0, F: 1, A: 0 },
-      },
-      {
-        text: '자연 속에서',
-        impact: { C: 0, S: 2, F: 0, A: 1 },
-      },
-    ],
-  },
-  {
-    img: 'path/to/image8',
-    questionNum: 10,
-    questionText: '넌 새로운 경험을 시도하는 걸 좋아해?',
-    option: [
-      {
-        text: '네, 새로운 도전이 즐거워',
-        impact: { C: 0, S: 2, F: 0, A: 1 },
-      },
-      {
-        text: '아니, 안정적인 게 더 좋아',
-        impact: { C: 2, S: 0, F: 1, A: 0 },
-      },
-    ],
-  },
-  {
-    img: 'path/to/image9',
-    questionNum: 11,
-    questionText: '너의 일상에서 가장 많이 사용하는 아이템은?',
-    option: [
-      {
-        text: '스마트폰',
-        impact: { C: 1, S: 0, F: 0, A: 2 },
-      },
-      {
-        text: '헤드폰',
-        impact: { C: 0, S: 2, F: 1, A: 0 },
-      },
-    ],
-  },
-  {
-    img: 'path/to/image10',
-    questionNum: 12,
-    questionText: '친구에게 추천할 수 있는 가장 독특한 장소는?',
-    option: [
-      {
-        text: '갤러리나 박물관',
+        text: '느낌있는',
         impact: { C: 0, S: 2, F: 1, A: 0 },
       },
       {
-        text: '스트리트 아트 구역',
+        text: '편안한',
         impact: { C: 2, S: 0, F: 0, A: 1 },
+      },
+    ],
+  },
+  {
+    questionNum: 9,
+    questionText: '주말 데이트 룩으로 더 입고 싶은 것은?',
+    option: [
+      {
+        text: '슬렉스와 셔츠',
+        impact: { C: 0, S: 0, F: 2, A: 1 },
+      },
+      {
+        text: '와이드 펜츠와 후드',
+        impact: { C: 2, S: 1, F: 0, A: 0 },
+      },
+    ],
+  },
+  {
+    questionNum: 10,
+    questionText: '외출하는데, 무언가 허전하다면?',
+    option: [
+      {
+        text: '목걸이나 반지',
+        impact: { C: 0, S: 2, F: 0, A: 0 },
+      },
+      {
+        text: '클래식 시계, 스마트 워치 같은 손목 시계',
+        impact: { C: 1, S: 0, F: 2, A: 2 },
+      },
+    ],
+  },
+  {
+    questionNum: 11,
+    questionText: '옷을 구매할 때, 더 고려하는 점은?',
+    option: [
+      {
+        text: '가성비',
+        impact: { C: 1, S: 1, F: 1, A: 1 },
+      },
+      {
+        text: '가심비',
+        impact: { C: 1, S: 1, F: 1, A: 1 },
+      },
+    ],
+  },
+  {
+    questionNum: 12,
+    questionText: '너가 추구하는 색상톤은?',
+    option: [
+      {
+        text: '어두운 톤(카키, 브라운, 버건디)',
+        impact: { C: 0, S: 0, F: 2, A: 2 },
+      },
+      {
+        text: '밝은 톤(블루, 레드, 그린, 베이지)',
+        impact: { C: 2, S: 2, F: 0, A: 0 },
       },
     ],
   },
@@ -275,7 +261,6 @@ const mbtiDescriptions = {
 
 const resultArr = [
   {
-    img: 'htpasd/asdcxz/dasd',
     key: 'M',
     title: '미니멀 스타일',
     description:
@@ -287,33 +272,10 @@ const resultArr = [
       '최소한의 액세서리',
       '기능성과 실용성 중시',
     ],
-    items: [
-      {
-        name: '미니멀 셔츠',
-        img: 'https://example.com/minimal-shirt.jpg',
-        link: 'https://shop.example.com/minimal-shirt',
-      },
-      {
-        name: '슬림핏 팬츠',
-        img: 'https://example.com/slim-pants.jpg',
-        link: 'https://shop.example.com/slim-pants',
-      },
-      {
-        name: '미니멀 코트',
-        img: 'https://example.com/minimal-coat.jpg',
-        link: 'https://shop.example.com/minimal-coat',
-      },
-      {
-        name: '베이직 스니커즈',
-        img: 'https://example.com/basic-sneakers.jpg',
-        link: 'https://shop.example.com/basic-sneakers',
-      },
-    ],
-    celebrities: ['스티브 잡스', '김태희', '전지현'],
+    img: ['스티브 잡스', '김태희', '전지현'],
     mbti: ['INTJ', 'ISTP'],
   },
   {
-    img: 'htpasd/asdcxz/dasd',
     key: 'S',
     title: '스트릿 스타일',
     description:
@@ -325,53 +287,10 @@ const resultArr = [
       '스니커즈와 캡모자',
       '대담한 색상과 패턴',
     ],
-    items: [
-      {
-        name: '그래픽 티셔츠',
-        img: 'https://example.com/graphic-tee.jpg',
-        link: 'https://shop.example.com/graphic-tee',
-      },
-      {
-        name: '오버사이즈 후드티',
-        img: 'https://example.com/oversized-hoodie.jpg',
-        link: 'https://shop.example.com/oversized-hoodie',
-      },
-      {
-        name: '스트릿 청바지',
-        img: 'https://example.com/street-jeans.jpg',
-        link: 'https://shop.example.com/street-jeans',
-      },
-      {
-        name: '하이탑 스니커즈',
-        img: 'https://example.com/high-top-sneakers.jpg',
-        link: 'https://shop.example.com/high-top-sneakers',
-      },
-      {
-        name: '그래픽 티셔츠',
-        img: 'https://example.com/graphic-tee.jpg',
-        link: 'https://shop.example.com/graphic-tee',
-      },
-      {
-        name: '오버사이즈 후드티',
-        img: 'https://example.com/oversized-hoodie.jpg',
-        link: 'https://shop.example.com/oversized-hoodie',
-      },
-      {
-        name: '스트릿 청바지',
-        img: 'https://example.com/street-jeans.jpg',
-        link: 'https://shop.example.com/street-jeans',
-      },
-      {
-        name: '하이탑 스니커즈',
-        img: 'https://example.com/high-top-sneakers.jpg',
-        link: 'https://shop.example.com/high-top-sneakers',
-      },
-    ],
-    celebrities: ['지드래곤', '빌리 아일리시', '트래비스 스콧'],
+    img: ['지드래곤', '빌리 아일리시', '트래비스 스콧'],
     mbti: ['ESTP', 'ENTP'],
   },
   {
-    img: 'htpasd/asdcxz/dasd',
     key: 'F',
     title: '포멀 스타일',
     description:
@@ -383,53 +302,10 @@ const resultArr = [
       '품질 좋은 가죽 신발과 가방',
       '절제된 액세서리',
     ],
-    items: [
-      {
-        name: '테일러드 재킷',
-        img: 'https://example.com/tailored-jacket.jpg',
-        link: 'https://shop.example.com/tailored-jacket',
-      },
-      {
-        name: '클래식 셔츠',
-        img: 'https://example.com/classic-shirt.jpg',
-        link: 'https://shop.example.com/classic-shirt',
-      },
-      {
-        name: '슬랙스 팬츠',
-        img: 'https://example.com/slacks.jpg',
-        link: 'https://shop.example.com/slacks',
-      },
-      {
-        name: '가죽 로퍼',
-        img: 'https://example.com/leather-loafers.jpg',
-        link: 'https://shop.example.com/leather-loafers',
-      },
-      {
-        name: '테일러드 재킷',
-        img: 'https://example.com/tailored-jacket.jpg',
-        link: 'https://shop.example.com/tailored-jacket',
-      },
-      {
-        name: '클래식 셔츠',
-        img: 'https://example.com/classic-shirt.jpg',
-        link: 'https://shop.example.com/classic-shirt',
-      },
-      {
-        name: '슬랙스 팬츠',
-        img: 'https://example.com/slacks.jpg',
-        link: 'https://shop.example.com/slacks',
-      },
-      {
-        name: '가죽 로퍼',
-        img: 'https://example.com/leather-loafers.jpg',
-        link: 'https://shop.example.com/leather-loafers',
-      },
-    ],
-    celebrities: ['케이트 미들턴', '조지 클루니', '김희애'],
+    img: ['케이트 미들턴', '조지 클루니', '김희애'],
     mbti: ['ENTJ', 'ISTJ'],
   },
   {
-    img: 'htpasd/asdcxz/dasd',
     key: 'C',
     title: '캐주얼 스타일',
     description:
@@ -441,69 +317,7 @@ const resultArr = [
       '실용적인 아우터',
       '자연스러운 액세서리',
     ],
-    items: [
-      {
-        name: '기본 티셔츠',
-        img: 'https://cdn.sisajournal.com/news/photo/201906/186568_91172_2053.jpg',
-        link: 'https://shop.example.com/basic-tee',
-      },
-      {
-        name: '데님 팬츠',
-        img: 'https://cdn.sisajournal.com/news/photo/201906/186568_91172_2053.jpg',
-        link: 'https://shop.example.com/denim-pants',
-      },
-      {
-        name: '니트 가디건',
-        img: 'https://cdn.sisajournal.com/news/photo/201906/186568_91172_2053.jpg',
-        link: 'https://shop.example.com/knit-cardigan',
-      },
-      {
-        name: '데일리 스니커즈',
-        img: 'https://cdn.sisajournal.com/news/photo/201906/186568_91172_2053.jpg',
-        link: 'https://shop.example.com/daily-sneakers',
-      },
-      {
-        name: '기본 티셔츠',
-        img: 'https://cdn.sisajournal.com/news/photo/201906/186568_91172_2053.jpg',
-        link: 'https://shop.example.com/basic-tee',
-      },
-      {
-        name: '데님 팬츠',
-        img: 'https://cdn.sisajournal.com/news/photo/201906/186568_91172_2053.jpg',
-        link: 'https://shop.example.com/denim-pants',
-      },
-      {
-        name: '니트 가디건',
-        img: 'https://cdn.sisajournal.com/news/photo/201906/186568_91172_2053.jpg',
-        link: 'https://shop.example.com/knit-cardigan',
-      },
-      {
-        name: '데일리 스니커즈',
-        img: 'https://cdn.sisajournal.com/news/photo/201906/186568_91172_2053.jpg',
-        link: 'https://shop.example.com/daily-sneakers',
-      },
-      {
-        name: '기본 티셔츠',
-        img: 'https://cdn.sisajournal.com/news/photo/201906/186568_91172_2053.jpg',
-        link: 'https://shop.example.com/basic-tee',
-      },
-      {
-        name: '데님 팬츠',
-        img: 'https://cdn.sisajournal.com/news/photo/201906/186568_91172_2053.jpg',
-        link: 'https://shop.example.com/denim-pants',
-      },
-      {
-        name: '니트 가디건',
-        img: 'https://cdn.sisajournal.com/news/photo/201906/186568_91172_2053.jpg',
-        link: 'https://shop.example.com/knit-cardigan',
-      },
-      {
-        name: '데일리 스니커즈',
-        img: 'https://cdn.sisajournal.com/news/photo/201906/186568_91172_2053.jpg',
-        link: 'https://shop.example.com/daily-sneakers',
-      },
-    ],
-    celebrities: [
+    img: [
       'https://i.imgur.com/XEf0tYZ.jpg',
       'https://i.imgur.com/XEf0tYZ.jpg',
       'https://i.imgur.com/XEf0tYZ.jpg',
@@ -511,7 +325,6 @@ const resultArr = [
     mbti: ['ISFJ', 'ESFJ'],
   },
   {
-    img: 'htpasd/asdcxz/dasd',
     key: 'A',
     title: '아메카지 스타일',
     description:
@@ -523,49 +336,7 @@ const resultArr = [
       '자연스러운 색상과 소재',
       '레이어드 스타일링',
     ],
-    items: [
-      {
-        name: '빈티지 데님 재킷',
-        img: 'https://example.com/vintage-denim-jacket.jpg',
-        link: 'https://shop.example.com/vintage-denim-jacket',
-      },
-      {
-        name: '카고 팬츠',
-        img: 'https://example.com/cargo-pants.jpg',
-        link: 'https://shop.example.com/cargo-pants',
-      },
-      {
-        name: '워커 부츠',
-        img: 'https://example.com/worker-boots.jpg',
-        link: 'https://shop.example.com/worker-boots',
-      },
-      {
-        name: '체크 셔츠',
-        img: 'https://example.com/check-shirt.jpg',
-        link: 'https://shop.example.com/check-shirt',
-      },
-      {
-        name: '빈티지 데님 재킷',
-        img: 'https://example.com/vintage-denim-jacket.jpg',
-        link: 'https://shop.example.com/vintage-denim-jacket',
-      },
-      {
-        name: '카고 팬츠',
-        img: 'https://example.com/cargo-pants.jpg',
-        link: 'https://shop.example.com/cargo-pants',
-      },
-      {
-        name: '워커 부츠',
-        img: 'https://example.com/worker-boots.jpg',
-        link: 'https://shop.example.com/worker-boots',
-      },
-      {
-        name: '체크 셔츠',
-        img: 'https://example.com/check-shirt.jpg',
-        link: 'https://shop.example.com/check-shirt',
-      },
-    ],
-    celebrities: ['이나영', '정해인', '키무라 타쿠야'],
+    img: ['이나영', '정해인', '키무라 타쿠야'],
     mbti: ['INFP', 'ISFP'],
   },
 ];
