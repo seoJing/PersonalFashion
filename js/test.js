@@ -6,6 +6,7 @@ const progressUl = document.body.querySelector('.progressUl');
 const progressDiv = document.body.querySelector('.progressDiv');
 
 let selectedIndexes = Array(questionArr.length).fill(null);
+let answeredCount = 0;
 let recomendStyleArr;
 let swiper;
 
@@ -106,13 +107,15 @@ const handleButtonClick = (optionIndex, e, slideIndex) => {
   else if (e.target.previousElementSibling != null)
     e.target.previousElementSibling.classList.remove('selected');
 
+  if (selectedIndexes[slideIndex] == null) answeredCount++;
   selectedIndexes[slideIndex] = optionIndex;
+  console.log(answeredCount);
 
   const progressLi = document.querySelector(`.progressLi${slideIndex}`);
   progressLi.classList.add('answered');
   updateProgress();
 
-  if (slideIndex < questionArr.length - 1) {
+  if (answeredCount < questionArr.length) {
     swiper.slideNext();
   } else {
     if (!document.querySelector('.toResultPageButton')) {

@@ -14,29 +14,25 @@
   height: 100%;
 }
 .hero {
-  left: 12%;
-  background-color: #ffffff;
+  left: 12.5%;
   height: 100%;
-  width: 40%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+  overflow:auto;
 }
 .swiper-container {
-  width: 100%;
+  width:95%;
   position: relative;
-  background: #fff;
   border-radius: 18px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 .swiper-slide {
   width: 100%;
-  height: 500px;
-  background-color: #ffffff;
   border-color: black;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0.2, 0, 0, 0.2);
@@ -44,39 +40,35 @@
   text-align: center;
   flex-direction: column;
   justify-content: flex-start;
-  opacity: 0.5;
-  transform: scale(0.92);
-  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0.4;
+  transform: scale(0.8);
+  transition: opacity 0.4s, transform 0.4s;
 }
 .swiper-slide-active {
   opacity: 1;
-  background: #f0f8ff;
-  transform: scale(1.2);
+  transform: scale(0.95);
   z-index: 2;
-  box-shadow: 0 2px 12px rgba(0, 80, 255, 0.08);
 }
-.swiper-slide:not(.swiper-slide-active) .selectButton {
+.swiper-slide:not(.swiper-slide-active) .selectButton1, .swiper-slide:not(.swiper-slide-active) .selectButton2 {
   display: none; /* 활성화된 슬라이드만 버튼 보이기 */
 }
 .question {
-  font-size: 150%;
+  font-size: 110%;
   font-weight: bold;
-  margin-bottom: 5%;
 }
 .selectButtonDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .selectButton1,
 .selectButton2 {
   width: 60%;
-  padding: 3% 2%;
+  padding: 1.5%;
   margin: 1%;
   border: none;
   border-radius: 15px;
-  font-size: 110%;
+  font-size: 100%;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -91,20 +83,21 @@
   transform: translateY(-2px);
 }
 .toResultPageButton {
-  width: 50%;
-  height: 10%;
-
-  border: none;
-  border-radius: 15px;
-  font-weight: bold;
-  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
   font-size: 1.4rem;
-  color: white;
+  font-weight : bold;
   background-color: #0d6475;
-  transition: all 0.3s ease;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
 }
 .toResultPageButton:hover {
-  background-color: #08404b;
+  background-color:  #08404b;
   transform: translateY(-2px);
 }
 
@@ -116,6 +109,8 @@
   padding: 0;
 }
 .progressUl li {
+  justify-content: center;
+  font-size:0.7rem;
   margin-bottom: 4%;
 }
 .progressUl li a {
@@ -129,7 +124,6 @@
 .progressUl li.answered a {
   pointer-events: auto; /* 응답된 질문만 클릭 허용 */
   color: #87d4e3;
-  font-weight: bold;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -138,15 +132,15 @@ html {
   transition: 0.2s ease;
 }
 .progressDiv {
-  margin: 2.5%;
+  overflow:hidden;
   padding: 2.5%;
   background-color: white; /* #1ca2bd */
   box-shadow: 0 4px 12px rgba(0.2, 0, 0, 0.2);
   border-radius: 15px;
-  height: 40vh;
+  height: 50vh;
   position: fixed;
   top: 20%;
-  left: 15%;
+  left: 7.5%
 }
 .progressBarWrapper {
   width: 100%;
@@ -159,13 +153,12 @@ html {
 .progressBar {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, #87d4e3, #03272f);
+  background: linear-gradient(90deg,#B6E8F0, #48C5DA);
   transition: width 1s ease;
 }
 .progressPercent {
-  display: none;
   font-size: 14px;
   text-align: right;
-  display: block;
+  display: none;
   color: #333;
 }

@@ -1,14 +1,14 @@
 const questionArr = [
   {
     questionNum: 1,
-    questionText: '첫 만남에서 셔츠를 입고 나간다면?',
+    questionText: '첫 만남에 셔츠를 입고 나간다면?',
     option: [
       {
-        text: '너무 차려입고 나가나..? 부끄러운데',
+        text: '너무 차려입고 나가나..?',
         impact: { C: 2, S: 1, F: 0, A: 0 },
       },
       {
-        text: '좋은데? 넥타이도 매볼까',
+        text: '무난하고 좋은데?',
         impact: { C: 0, S: 0, F: 2, A: 1 },
       },
     ],
@@ -18,7 +18,7 @@ const questionArr = [
     questionText: '신입생 오티날 청바지, 맨투맨 어떻게 생각해?',
     option: [
       {
-        text: '너무 무난한거 아니야?',
+        text: '너무 안꾸민거 아니야?',
         impact: { C: 0, S: 2, F: 0, A: 1 },
       },
       {
@@ -29,28 +29,28 @@ const questionArr = [
   },
   {
     questionNum: 3,
-    questionText: '무난한 검정색 바지를 입었는데, 마무리는 뭐로 할까?',
+    questionText: '어떤 신발을 더 즐겨신어?',
     option: [
       {
-        text: '로퍼나 더비, 첼시부츠 같은 가죽 구두',
+        text: '로퍼, 더비, 첼시부츠 같은 구두',
         impact: { C: 0, S: 0, F: 2, A: 1 },
       },
       {
-        text: '나이키, 아디다스 같은 운동화',
+        text: '스니커즈나 운동화',
         impact: { C: 2, S: 1, F: 0, A: 0 },
       },
     ],
   },
   {
     questionNum: 4,
-    questionText: '평소에 자주 손이 가는 애착 가방이 있다면?',
+    questionText: '어떤 가방이 더 좋아?',
     option: [
       {
-        text: '백팩이나 크로스백 같은 실용적인 가방',
+        text: '백팩, 크로스백 같이 실용적인 가방',
         impact: { C: 2, S: 1, F: 0, A: 0 },
       },
       {
-        text: '토트백이나 클러치 같은 스타일리시한 가방',
+        text: '토트백, 숄더백 같이 스타일리시한 가방',
         impact: { C: 0, S: 0, F: 2, A: 1 },
       },
     ],
@@ -60,18 +60,18 @@ const questionArr = [
     questionText: '날이 좀 추워지면, 가장 먼저 생각나는 아우터는?',
     option: [
       {
-        text: '트렌치코트나 테일러드 자켓 같은 세련된 아우터',
+        text: '코트나 블레이저?',
         impact: { C: 0, S: 0, F: 2, A: 1 },
       },
       {
-        text: '후드티나 바람막이, 플리스 같은 편안한 아우터',
+        text: '후드티, 바람막이같이 편안한 아우터',
         impact: { C: 2, S: 1, F: 0, A: 0 },
       },
     ],
   },
   {
     questionNum: 6,
-    questionText: '갑작스럽게 친구가 나오라고 할 때?',
+    questionText: '갑작스럽게 친구가 나오라고 할 때',
     option: [
       {
         text: '간단하게 후드티나 입고 나가자',
@@ -85,7 +85,7 @@ const questionArr = [
   },
   {
     questionNum: 7,
-    questionText: '옷장을 열었을 때, 가장 많은 아이템은?',
+    questionText: '옷장에 더 많이 보유한 아이템은?',
     option: [
       {
         text: '기본템',
@@ -99,7 +99,7 @@ const questionArr = [
   },
   {
     questionNum: 8,
-    questionText: '오늘 하루의 나를 표현하는 단어를?',
+    questionText: '나의 스타일을 표현하는 단어는?',
     option: [
       {
         text: '느낌있는',
@@ -113,56 +113,56 @@ const questionArr = [
   },
   {
     questionNum: 9,
-    questionText: '주말 데이트 룩으로 더 입고 싶은 것은?',
+    questionText: '주말 데이트 룩으로 더 선호하는 룩은?',
     option: [
       {
-        text: '슬렉스와 셔츠',
+        text: '단정한 슬랙스와 셔츠',
         impact: { C: 0, S: 0, F: 2, A: 1 },
       },
       {
-        text: '와이드 펜츠와 후드',
+        text: '캐주얼한 와이드 팬츠와 후드',
         impact: { C: 2, S: 1, F: 0, A: 0 },
       },
     ],
   },
   {
     questionNum: 10,
-    questionText: '외출하는데, 무언가 허전하다면?',
+    questionText: '마무리로 액세서리를 추가해야 한다면?',
     option: [
       {
         text: '목걸이나 반지',
         impact: { C: 0, S: 2, F: 0, A: 0 },
       },
       {
-        text: '클래식 시계, 스마트 워치 같은 손목 시계',
+        text: '스마트워치나 손목시계',
         impact: { C: 1, S: 0, F: 2, A: 2 },
       },
     ],
   },
   {
     questionNum: 11,
-    questionText: '옷을 구매할 때, 더 고려하는 점은?',
+    questionText: '옷을 구매할 때, 더 고려하는 것은?',
     option: [
       {
-        text: '가성비',
+        text: '금액이 저렴해야지!',
         impact: { C: 1, S: 1, F: 1, A: 1 },
       },
       {
-        text: '가심비',
+        text: '비싸도 예쁘면 장떙!',
         impact: { C: 1, S: 1, F: 1, A: 1 },
       },
     ],
   },
   {
     questionNum: 12,
-    questionText: '너가 추구하는 색상톤은?',
+    questionText: '추구하는 색상톤은?',
     option: [
       {
-        text: '어두운 톤(카키, 브라운, 버건디)',
+        text: '카키, 브라운, 버건디',
         impact: { C: 0, S: 0, F: 2, A: 2 },
       },
       {
-        text: '밝은 톤(블루, 레드, 그린, 베이지)',
+        text: '블루, 레드, 그린, 베이지',
         impact: { C: 2, S: 2, F: 0, A: 0 },
       },
     ],

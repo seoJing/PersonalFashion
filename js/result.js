@@ -95,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 3,
     centeredSlides: true,
     slideToClickedSlide: true,
-    spaceBetween: 100,
     initialSlide: 1,
     effect: 'coverflow',
     coverflowEffect: {
