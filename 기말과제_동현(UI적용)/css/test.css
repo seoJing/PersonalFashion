@@ -1,0 +1,75 @@
+.hidden {
+  display: none;
+}
+.hero {
+  margin: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  flex-direction: column;
+}
+
+.heroBox {
+  background-color: #ffffff; 
+  border-radius: 10px;        
+  border-color: black;
+  width: 85%;                
+  height: 80%;                
+  padding: 3%;              
+  box-shadow: 0 4px 12px rgba(0.2, 0, 0, 0.2);
+  text-align: center;        
+  display: flex;
+  flex-direction: column;      /* 세로로 배치 */
+  justify-content: flex-start; 
+  position:relative;
+  gap: 15px;                   
+}
+
+.question{
+  padding-top:10%;
+  font-size:150%;
+  font-weight:bold;
+}
+.selectButton {
+  padding-top:10%;
+  display: flex;
+  flex-direction: column; /* 세로 정렬로 변경 */
+  align-items: center; /* 가로 가운데 정렬 */
+}
+
+.selectButton1, .selectButton2 {
+  width:70%;
+  padding:3% 2%;
+  margin:3%;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #0d6475;
+  color: white;
+}
+.selectButton1:hover, .selectButton2:hover{
+  background-color: #08404b;
+  transform: translateY(-2px);
+}
+.toResultPageButton{
+  width:30%;
+  height:35%;
+  margin:5%;
+  border:none;
+  border-radius:15px;
+  font-weight:bold;
+  cursor: pointer;
+  font-size:1.4rem;
+  color:white;
+  background-color:#0d6475;
+  transition: all 0.3s ease;
+}
+.toResultPageButton:hover{
+  background-color: #08404b;
+  transform: translateY(-2px);
+}
