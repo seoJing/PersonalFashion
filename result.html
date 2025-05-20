@@ -30,9 +30,9 @@
     </header>
     <section id="main-section" class="section">
       <section class="hero">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
+        <div class="swiper-container" id="main-container">
+          <div class="swiper-wrapper" id="main-wrapper">
+            <div class="swiper-slide" id="main-slide">
               <div class="secondStyleTitle">이런 스타일은 어때요?</div>
               <div class="secondStyleSubtitle"></div>
               <div class="secondStyleImg">
@@ -55,7 +55,7 @@
               <div class="secondStyleDescription"></div>
               <div class="secondStyleCharacteristics"></div>
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide" id="main-slide">
               <div class="heroTitle"></div>
               <div class="heroImage">
                 <img src="img/img10.png" alt="이미지1" class="heroImg1" />
@@ -65,27 +65,62 @@
               <div class="heroDescription"></div>
               <div class="heroCharacteristics"></div>
             </div>
-            <div class="swiper-slide">
-              <div class="mbti1Div">
-                <span class="mbtiTitle">스타일이 추구하는 mbti </span>
-                <span class="mbtiSubtitle1"></span>
-                <img class="mbtiImg1" src="" alt="mbti1" />
-                <span class="mbtiDescription1"></span>
-              </div>
-              <div class="mbti2Div">
-                <span class="mbtiTitle2">스타일이 추구하는 mbti 2 </span>
-                <span class="mbtiSubtitle2"></span>
-                <img class="mbtiImg2" src="" alt="mbti2" />
-                <span class="mbtiDescription2"></span>
+            <div class="swiper-slide" id="main-slide">
+              <!-- 자식 스위퍼 영역 코드 -->
+              <div class="youtubeDiv">
+                <div class="youtubeTitle">스타일과 관련된 유튜브</div>
+                <div class="youtube-icon-container">
+                  <img class="youtubeIcon" src="" alt="" />
+                </div>
+                <div class="youtubeName">유튜브 이름</div>
+                <div
+                  class="swiper-container swiper-container-nested"
+                  id="youtube-container"
+                >
+                  <!-- 이전 버튼 추가 -->
+                  <div class="swiper-button-prev youtube-prev"></div>
+
+                  <div class="swiper-wrapper" id="youtube-wrapper">
+                    <div class="swiper-slide" id="youtube-slide">
+                      <iframe
+                        class="youtubeVideo"
+                        src=""
+                        frameborder="0"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                    <div class="swiper-slide" id="youtube-slide">
+                      <iframe
+                        class="youtubeVideo"
+                        src=""
+                        frameborder="0"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                    <div class="swiper-slide" id="youtube-slide">
+                      <iframe
+                        class="youtubeVideo"
+                        src=""
+                        frameborder="0"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  </div>
+
+                  <!-- 다음 버튼 추가 -->
+                  <div class="swiper-button-next youtube-next"></div>
+
+                  <div class="swiper-pagination swiper-pagination-nested"></div>
+                </div>
               </div>
             </div>
-            <!-- ... -->
           </div>
         </div>
         <span class="heroBox">
           <div class="button">
             <button class="restartButton">다시하기</button>
-            <button class="shareButton">공유하기</button></div>
+            <button class="shareButton">공유하기</button>
+          </div>
         </span>
       </section>
     </section>

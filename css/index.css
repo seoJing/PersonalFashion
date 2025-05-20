@@ -45,7 +45,7 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding:5px;
+  padding: 5px;
 }
 .backgroundImageGroup {
   display: flex;
@@ -66,13 +66,13 @@
 .bgImage {
   flex: 0 0 auto;
   width: 20vw;
-  margin:5px;
+  margin: 5px;
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   /* 임시 색상부여 */
   &:nth-child(5n-4) {
     background: red;
@@ -113,40 +113,40 @@
 
 /* 적응형..인데 모바일에서만 적용하고 pc에 영향 안끼칠려면 대공사 필요해서 일단 주석처리하고 진행 */
 /* @media (max-width: 768px) {
-  .hero {
-    min-height: 70vh;
-    align-items: flex-start;
-  }
-  .herobox {
-    width: 90%;
-    height: 60%;
-    margin-top: 20%;
-  }
-  .heroContent {
-    align-items: center; 
-  }
-  .heroTitle {
-    font-size: 2rem;
-  }
-  .heroSubtitle {
-    font-size: 1.2rem;
-  }
-  .heroBackgroundImage {
-    height:100%;
-  }
-  .bgImage {
-    width:50vw;
+.hero {
+min-height: 70vh;
+align-items: flex-start;
+}
+.herobox {
+width: 90%;
+height: 60%;
+margin-top: 20%;
+}
+.heroContent {
+align-items: center;
+}
+.heroTitle {
+font-size: 2rem;
+}
+.heroSubtitle {
+font-size: 1.2rem;
+}
+.heroBackgroundImage {
+height:100%;
+}
+.bgImage {
+width:50vw;
 }
 .backgroundImageGroup {
-  animation: scrollLeft 20s linear infinite;
-  width: calc((50vw + 20px) * 5);
+animation: scrollLeft 20s linear infinite;
+width: calc((50vw + 20px) * 5);
 }
 @keyframes scrollLeft {
-  0%   {
-    transform: translateX(0%);
-    }
-  100% {
-    transform: translateX(calc(-1 * (50vw + 20px) * 5));
-    }
-  }
+0% {
+transform: translateX(0%);
+}
+100% {
+transform: translateX(calc(-1 * (50vw + 20px) * 5));
+}
+}
 } */

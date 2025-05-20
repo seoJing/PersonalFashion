@@ -1,4 +1,4 @@
-import { resultArr, mbtiDescriptions } from './db.js';
+import { resultArr } from './db.js';
 import { PATH } from './path.js';
 
 const heroTitle = document.body.querySelector('.heroTitle');
@@ -22,12 +22,10 @@ const secondStyleImg1 = document.body.querySelector('.secondStyleImg1');
 const secondStyleImg2 = document.body.querySelector('.secondStyleImg2');
 const secondStyleImg3 = document.body.querySelector('.secondStyleImg3');
 
-const mbtiSubtitle1 = document.body.querySelector('.mbtiSubtitle1');
-const mbtiSubtitle2 = document.body.querySelector('.mbtiSubtitle2');
-const mbtiImg1 = document.body.querySelector('.mbtiImg1');
-const mbtiImg2 = document.body.querySelector('.mbtiImg2');
-const mbtiDescription1 = document.body.querySelector('.mbtiDescription1');
-const mbtiDescription2 = document.body.querySelector('.mbtiDescription2');
+const youtubeTitle = document.body.querySelector('.youtubeTitle');
+const youtubeName = document.body.querySelector('.youtubeName');
+const youtubeVideo = document.body.querySelectorAll('.youtubeVideo');
+const youtubeIcon = document.body.querySelector('.youtubeIcon');
 
 // URL 파라미터 파싱
 const urlParams = new URLSearchParams(window.location.search);
@@ -38,9 +36,6 @@ const firstRecomendStyle = resultArr.find(
 );
 const secondRecomendStyle = resultArr.find(
   (item) => item.key === decodeData[1][0]
-);
-const leastRecomendStyle = resultArr.find(
-  (item) => item.key === decodeData[decodeData.length - 1][0]
 );
 
 // 기본 정보 설정
@@ -67,16 +62,14 @@ secondStyleImg3.src = '../img/' + secondRecomendStyle.img[2];
 secondStyleDescription.innerText = secondRecomendStyle.description;
 secondStyleCharacteristics.innerText = secondRecomendStyle.characteristics;
 
-mbtiSubtitle1.innerText = firstRecomendStyle.mbti[0];
-mbtiSubtitle2.innerText = firstRecomendStyle.mbti[1];
-mbtiImg1.src =
-  '../img/' + mbtiDescriptions[firstRecomendStyle.mbti[0]] + '.png';
-mbtiImg2.src =
-  '../img/' + mbtiDescriptions[firstRecomendStyle.mbti[1]] + '.png';
-mbtiDescription1.innerText =
-  mbtiDescriptions[firstRecomendStyle.mbti[0]].description;
-mbtiDescription2.innerText =
-  mbtiDescriptions[firstRecomendStyle.mbti[1]].description;
+youtubeTitle.innerText = `${firstRecomendStyle.title}과 관련된 유튜브`;
+youtubeName.innerText = firstRecomendStyle.youtube.name;
+youtubeVideo.forEach((e, i) => {
+  if (firstRecomendStyle.youtube.src[i]) {
+    e.src = firstRecomendStyle.youtube.src[i];
+  }
+});
+youtubeIcon.src = firstRecomendStyle.youtube.icon;
 
 restartButton.addEventListener('click', () => {
   window.location.href = `${PATH.INDEX}`;
@@ -90,8 +83,24 @@ shareButton.addEventListener('click', () => {
       alert('링크가 복사되었습니다!');
     });
 });
+
 document.addEventListener('DOMContentLoaded', () => {
-  const swiper = new Swiper('.swiper-container', {
+  // 먼저 중첩된 자식 스위퍼를 초기화
+  const nestedSwiper = new Swiper('.swiper-container-nested', {
+    pagination: {
+      el: '.swiper-pagination-nested',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.youtube-next',
+      prevEl: '.youtube-prev',
+    },
+    slidesPerView: 1,
+    loop: true,
+  });
+
+  // 그 다음 부모 스위퍼 초기화
+  const mainSwiper = new Swiper('#main-container', {
     slidesPerView: 3,
     centeredSlides: true,
     slideToClickedSlide: true,
@@ -103,12 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       depth: 100,
       modifier: 2,
       slideShadows: false,
-      initialSlide: 1,
       scale: 0.85,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
     },
   });
 });
