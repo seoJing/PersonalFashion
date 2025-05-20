@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,61 +18,61 @@
   </head>
   <body>
     <header id="main-header" class="header">
-      <div class="titleDiv">
-        <img class="titleIcon" src="" alt="아이콘" />
-        <span class="titleText">PersonalFashion</span>
+      <div class="title-container">
+        <img class="title-icon" src="" alt="아이콘" />
+        <h1 class="title-text">PersonalFashion</h1>
       </div>
-      <div class="headerNavDiv">
-        <button class="mainButton">메인</button>
-        <button class="aboutButton">소개</button>
-        <button class="mobileModalOpenButton">모달</button>
-      </div>
+      <nav class="header-nav">
+        <button class="main-button">메인</button>
+        <button class="about-button">소개</button>
+        <button class="mobile-modal-open-button">모달</button>
+      </nav>
     </header>
-    <section id="main-section" class="section">
+    <main id="main-section" class="section">
       <section class="hero">
         <div class="swiper-container" id="main-container">
           <div class="swiper-wrapper" id="main-wrapper">
-            <div class="swiper-slide" id="main-slide">
-              <div class="secondStyleTitle">이런 스타일은 어때요?</div>
-              <div class="secondStyleSubtitle"></div>
-              <div class="secondStyleImg">
+            <article class="swiper-slide" id="main-slide">
+              <h2 class="second-style-title">이런 스타일은 어때요?</h2>
+              <h3 class="second-style-subtitle"></h3>
+              <div class="second-style-img">
                 <img
                   src="img/img10.png"
                   alt="이미지1"
-                  class="secondStyleImg1"
+                  class="second-style-img1"
                 />
                 <img
                   src="img/img11.png"
                   alt="이미지2"
-                  class="secondStyleImg2"
+                  class="second-style-img2"
                 />
                 <img
                   src="img/img12.png"
                   alt="이미지3"
-                  class="secondStyleImg3"
+                  class="second-style-img3"
                 />
               </div>
-              <div class="secondStyleDescription"></div>
-              <div class="secondStyleCharacteristics"></div>
-            </div>
-            <div class="swiper-slide" id="main-slide">
-              <div class="heroTitle"></div>
-              <div class="heroImage">
-                <img src="img/img10.png" alt="이미지1" class="heroImg1" />
-                <img src="img/img11.png" alt="이미지2" class="heroImg2" />
-                <img src="img/img12.png" alt="이미지3" class="heroImg3" />
+              <p class="second-style-description"></p>
+              <div class="second-style-characteristics"></div>
+            </article>
+            <article class="swiper-slide" id="main-slide">
+              <h2 class="hero-title"></h2>
+              <div class="hero-image">
+                <img src="img/img10.png" alt="이미지1" class="hero-img1" />
+                <img src="img/img11.png" alt="이미지2" class="hero-img2" />
+                <img src="img/img12.png" alt="이미지3" class="hero-img3" />
               </div>
-              <div class="heroDescription"></div>
-              <div class="heroCharacteristics"></div>
-            </div>
-            <div class="swiper-slide" id="main-slide">
+              <p class="hero-description"></p>
+              <div class="hero-characteristics"></div>
+            </article>
+            <article class="swiper-slide" id="main-slide">
               <!-- 자식 스위퍼 영역 코드 -->
-              <div class="youtubeDiv">
-                <div class="youtubeTitle">스타일과 관련된 유튜브</div>
+              <div class="youtube-container">
+                <h2 class="youtube-title">스타일과 관련된 유튜브</h2>
                 <div class="youtube-icon-container">
-                  <img class="youtubeIcon" src="" alt="" />
+                  <img class="youtube-icon" src="" alt="유튜버 아이콘" />
                 </div>
-                <div class="youtubeName">유튜브 이름</div>
+                <h3 class="youtube-name">유튜브 이름</h3>
                 <div
                   class="swiper-container swiper-container-nested"
                   id="youtube-container"
@@ -83,7 +83,7 @@
                   <div class="swiper-wrapper" id="youtube-wrapper">
                     <div class="swiper-slide" id="youtube-slide">
                       <iframe
-                        class="youtubeVideo"
+                        class="youtube-video"
                         src=""
                         frameborder="0"
                         allowfullscreen
@@ -91,7 +91,7 @@
                     </div>
                     <div class="swiper-slide" id="youtube-slide">
                       <iframe
-                        class="youtubeVideo"
+                        class="youtube-video"
                         src=""
                         frameborder="0"
                         allowfullscreen
@@ -99,7 +99,7 @@
                     </div>
                     <div class="swiper-slide" id="youtube-slide">
                       <iframe
-                        class="youtubeVideo"
+                        class="youtube-video"
                         src=""
                         frameborder="0"
                         allowfullscreen
@@ -113,31 +113,31 @@
                   <div class="swiper-pagination swiper-pagination-nested"></div>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
         </div>
-        <span class="heroBox">
-          <div class="button">
-            <button class="restartButton">다시하기</button>
-            <button class="shareButton">공유하기</button>
+        <div class="hero-box">
+          <div class="button-container">
+            <button class="restart-button">다시하기</button>
+            <button class="share-button">공유하기</button>
           </div>
-        </span>
+        </div>
       </section>
-    </section>
+    </main>
     <footer id="main-footer" class="footer">
-      <div>
-        <h4 class="teamList">조원 목록</h4>
-        <p class="god">조장 : 202211461 서진규</p>
-        <p class="slave">
+      <section>
+        <h4 class="team-list">조원 목록</h4>
+        <p class="team-leader">조장 : 202211461 서진규</p>
+        <p class="team-members">
           조원 : 202211412 김동현<br />
           조원 : 202211549 황호찬
         </p>
-      </div>
+      </section>
     </footer>
-    <div class="mobileModalDiv">
-      <button class="mobileModalCloseButton">모달</button>
-      <button class="mobileModalMainButton">메인</button>
-      <button class="mobileModalAboutButton">소개</button>
+    <div class="mobile-modal" role="dialog" aria-modal="true">
+      <button class="mobile-modal-close-button">모달</button>
+      <button class="mobile-modal-main-button">메인</button>
+      <button class="mobile-modal-about-button">소개</button>
     </div>
     <script type="module" src="js/result.js"></script>
     <script type="module" src="js/index.js"></script>

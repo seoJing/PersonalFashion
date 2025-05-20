@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,17 +13,17 @@
   </head>
   <body>
     <header id="main-header" class="header">
-      <div class="titleDiv">
-        <img class="titleIcon" src="asdad" alt="아이콘" />
-        <span class="titleText">PersonalFashion</span>
+      <div class="title-container">
+        <img class="title-icon" src="asdad" alt="아이콘" />
+        <h1 class="title-text">PersonalFashion</h1>
       </div>
-      <div class="headerNavDiv">
-        <button class="mainButton">메인</button>
-        <button class="aboutButton">소개</button>
-        <button class="mobileModalOpenButton">모달</button>
-      </div>
+      <nav class="header-nav">
+        <button class="main-button">메인</button>
+        <button class="about-button">소개</button>
+        <button class="mobile-modal-open-button">모달</button>
+      </nav>
     </header>
-    <section id="main-section" class="section">
+    <main id="main-section" class="section">
       <section class="hero">
         <!-- Swiper 구조로 변경 -->
         <div class="swiper-container">
@@ -32,31 +32,31 @@
           </div>
         </div>
       </section>
-      <section class="progressDiv">
-        <div class="progressDetail">
+      <aside class="progress-container">
+        <div class="progress-detail">
           <h5>이미 선택한 질문을 클릭하면 되돌릴 수 있습니다!</h5>
         </div>
-        <ul class="progressUl"></ul>
-        <div class="progressBarWrapper">
-          <div class="progressBar"></div>
+        <ol class="progress-list"></ol>
+        <div class="progress-bar-wrapper">
+          <div class="progress-bar"></div>
         </div>
-        <span class="progressPercent">0%</span>
-      </section>
-    </section>
+        <span class="progress-percent">0%</span>
+      </aside>
+    </main>
     <footer id="main-footer" class="footer">
-      <div>
-        <h4 class="teamList">조원 목록</h4>
-        <p class="god">조장 : 202211461 서진규</p>
-        <p class="slave">
+      <section>
+        <h4 class="team-list">조원 목록</h4>
+        <p class="team-leader">조장 : 202211461 서진규</p>
+        <p class="team-members">
           조원 : 202211412 김동현<br />
           조원 : 202211549 황호찬
         </p>
-      </div>
+      </section>
     </footer>
-    <div class="mobileModalDiv">
-      <button class="mobileModalCloseButton">모달</button>
-      <button class="mobileModalMainButton">메인</button>
-      <button class="mobileModalAboutButton">소개</button>
+    <div class="mobile-modal" role="dialog" aria-modal="true">
+      <button class="mobile-modal-close-button">모달</button>
+      <button class="mobile-modal-main-button">메인</button>
+      <button class="mobile-modal-about-button">소개</button>
     </div>
     <script type="module" src="js/test.js"></script>
     <script type="module" src="js/index.js"></script>

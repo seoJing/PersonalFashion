@@ -5,7 +5,7 @@
   align-items: center;
   overflow: hidden;
 }
-.herobox {
+.hero-box {
   position: absolute;
   width: 50%;
   height: 70%;
@@ -13,7 +13,7 @@
   border-radius: 15px; /* 둥근 테두리 */
   border-color: black;
 }
-.heroContent {
+.hero-content {
   display: flex;
   z-index: 2;
   height: 100%;
@@ -23,20 +23,20 @@
   align-items: center;
   text-align: center;
 }
-.heroTitle {
+.hero-title {
   font-size: 2.7rem;
   font-weight: bold;
 }
-.heroSubtitle {
+.hero-subtitle {
   font-size: 1.5rem;
 }
-.heroDetail {
+.hero-detail {
   margin-top: 5%;
   font-size: 1.1rem;
   font-weight: bold;
 }
 
-.heroBackgroundImage {
+.hero-background-image {
   opacity: 0.3; /* 불투명도 0 ~ 1.0*/
   position: absolute;
   width: 100%;
@@ -47,7 +47,7 @@
   box-sizing: border-box;
   padding: 5px;
 }
-.backgroundImageGroup {
+.background-image-group {
   display: flex;
   animation: scrollLeft 40s linear infinite;
   /* 보이는 영역의 대략적인 배수로 설정 */
@@ -63,7 +63,7 @@
   }
 }
 
-.bgImage {
+.bg-image {
   flex: 0 0 auto;
   width: 20vw;
   margin: 5px;
@@ -92,7 +92,7 @@
 }
 
 /* 시작하기 버튼 */
-.startButton {
+.start-button {
   padding: 3% 5%;
   background-color: #20c997;
   color: #fff;
@@ -105,48 +105,8 @@
   transition: all 0.3s ease;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
-.startButton:hover {
+.start-button:hover {
   background-color: #17a589;
   transform: translateY(-2px);
   color: black;
 }
-
-/* 적응형..인데 모바일에서만 적용하고 pc에 영향 안끼칠려면 대공사 필요해서 일단 주석처리하고 진행 */
-/* @media (max-width: 768px) {
-.hero {
-min-height: 70vh;
-align-items: flex-start;
-}
-.herobox {
-width: 90%;
-height: 60%;
-margin-top: 20%;
-}
-.heroContent {
-align-items: center;
-}
-.heroTitle {
-font-size: 2rem;
-}
-.heroSubtitle {
-font-size: 1.2rem;
-}
-.heroBackgroundImage {
-height:100%;
-}
-.bgImage {
-width:50vw;
-}
-.backgroundImageGroup {
-animation: scrollLeft 20s linear infinite;
-width: calc((50vw + 20px) * 5);
-}
-@keyframes scrollLeft {
-0% {
-transform: translateX(0%);
-}
-100% {
-transform: translateX(calc(-1 * (50vw + 20px) * 5));
-}
-}
-} */
