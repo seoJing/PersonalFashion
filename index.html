@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,72 +9,74 @@
   </head>
   <body>
     <header id="main-header" class="header">
-      <span class="titleDiv">
-        <img class="titleIcon" src="asdad" alt="아이콘" />
-        <span class="titleText">PersonalFashion</span>
-      </span>
-      <span class="headerNavDiv">
-        <button class="mainButton">메인</button>
-        <button class="aboutButton">소개</button>
-        <button class="mobileModalOpenButton">모달</button>
-      </span>
+      <div class="title-container">
+        <img class="title-icon" src="asdad" alt="아이콘" />
+        <h1 class="title-text">PersonalFashion</h1>
+      </div>
+      <nav class="header-nav">
+        <button class="main-button">메인</button>
+        <button class="about-button">소개</button>
+        <button class="mobile-modal-open-button">모달</button>
+      </nav>
     </header>
-    <section id="main-section" class="section">
-      <div class="hero">
-        <div class="heroBackgroundImage">
-          <div class="backgroundImageGroup">
-            <div class="bgImage">1</div>
-            <div class="bgImage">2</div>
-            <div class="bgImage">3</div>
-            <div class="bgImage">4</div>
-            <div class="bgImage">5</div>
-            <div class="bgImage">1</div>
-            <div class="bgImage">2</div>
-            <div class="bgImage">3</div>
-            <div class="bgImage">4</div>
-            <div class="bgImage">5</div>
+    <main id="main-section" class="section">
+      <section class="hero">
+        <div class="hero-background-image">
+          <div class="background-image-group">
+            <div class="bg-image">1</div>
+            <div class="bg-image">2</div>
+            <div class="bg-image">3</div>
+            <div class="bg-image">4</div>
+            <div class="bg-image">5</div>
+            <div class="bg-image">1</div>
+            <div class="bg-image">2</div>
+            <div class="bg-image">3</div>
+            <div class="bg-image">4</div>
+            <div class="bg-image">5</div>
           </div>
-          <div class="backgroundImageGroup">
-            <div class="bgImage">1</div>
-            <div class="bgImage">2</div>
-            <div class="bgImage">3</div>
-            <div class="bgImage">4</div>
-            <div class="bgImage">5</div>
-            <div class="bgImage">1</div>
-            <div class="bgImage">2</div>
-            <div class="bgImage">3</div>
-            <div class="bgImage">4</div>
-            <div class="bgImage">5</div>
+          <div class="background-image-group">
+            <div class="bg-image">1</div>
+            <div class="bg-image">2</div>
+            <div class="bg-image">3</div>
+            <div class="bg-image">4</div>
+            <div class="bg-image">5</div>
+            <div class="bg-image">1</div>
+            <div class="bg-image">2</div>
+            <div class="bg-image">3</div>
+            <div class="bg-image">4</div>
+            <div class="bg-image">5</div>
           </div>
         </div>
-        <div class="herobox">
-          <div class="heroOverlay"></div>
-          <div class="heroContent">
-            <h1 class="heroTitle">PersonalFashion</h1>
-            <h4 class="heroSubtitle">당신의 스타일을 찾아보세요!</h4>
-            <button class="startButton">시작하기</button>
-            <p class="heroDetail">
-              <span>Personalfashion</span>은 여러가지의 질문을 통해,<br />
+        <section class="hero-box">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h1 class="hero-title">PersonalFashion</h1>
+            <h4 class="hero-subtitle">당신의 스타일을 찾아보세요!</h4>
+            <button class="start-button">시작하기</button>
+            <p class="hero-detail">
+              <strong>Personalfashion</strong>은 여러가지의 질문을 통해,<br />
               당신에게 어울리는 패션을 찾아줍니다.
             </p>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
+      </section>
+    </main>
     <footer id="main-footer" class="footer">
-      <div>
-        <h4 class="teamList">조원 목록</h4>
-        <p class="god">조장 : 202211461 서진규</p>
-        <p class="slave">
+      <section>
+        <h4 class="team-list">조원 목록</h4>
+        <p class="team-leader">조장 : 202211461 서진규</p>
+        <p class="team-members">
           조원 : 202211412 김동현<br />
           조원 : 202211549 황호찬
         </p>
-      </div>
+      </section>
     </footer>
-    <div class="mobileModalDiv">
-      <button class="mobileModalCloseButton">모달</button>
-      <button class="mobileModalMainButton">메인</button>
-      <button class="mobileModalAboutButton">소개</button>
+    <div class="mobile-modal-overlay">
+      <div class="mobile-modal" role="dialog" aria-modal="true">
+        <button class="mobile-modal-close-button">모달</button>
+        <button class="mobile-modal-main-button">메인</button>
+        <button class="mobile-modal-about-button">소개</button>
+      </div>
     </div>
     <script type="module" src="js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

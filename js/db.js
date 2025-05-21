@@ -176,89 +176,6 @@ const personalityScores = {
   A: 0,
 };
 
-const mbtiDescriptions = {
-  INTJ: {
-    title: '용의주도한 전략가',
-    description:
-      '상상력이 풍부하며 전략적인 사고를 가진 당신은 모든 가능성을 고려하는 계획가입니다.',
-  },
-  INTP: {
-    title: '논리적인 사색가',
-    description:
-      '끊임없이 새로운 지식을 추구하며 독창적인 아이디어를 내는 발명가입니다.',
-  },
-  ENTJ: {
-    title: '대담한 통솔자',
-    description:
-      '카리스마 있고 효율적인 리더로, 장기적인 계획과 목표 달성에 능합니다.',
-  },
-  ENTP: {
-    title: '뜨거운 논쟁을 즐기는 변론가',
-    description:
-      '지적 도전을 즐기며 창의적인 문제 해결 능력을 가진 혁신가입니다.',
-  },
-  INFJ: {
-    title: '선의의 옹호자',
-    description:
-      '조용하고 신비로우며 영감을 주는 이상주의자로, 확고한 가치관을 가지고 있습니다.',
-  },
-  INFP: {
-    title: '열정적인 중재자',
-    description:
-      '이상주의적이고 충실하며, 자신의 가치와 사람들에게 깊은 관심을 가집니다.',
-  },
-  ENFJ: {
-    title: '정의로운 사회운동가',
-    description:
-      '카리스마 있고 영감을 주는 지도자로, 다른 사람들의 성장을 돕는 데 열정적입니다.',
-  },
-  ENFP: {
-    title: '재기발랄한 활동가',
-    description:
-      '열정적이고 창의적이며, 항상 새로운 가능성을 찾는 자유로운 영혼입니다.',
-  },
-  ISTJ: {
-    title: '청렴결백한 논리주의자',
-    description:
-      '실용적이고 사실 중심적이며, 믿을 수 있고 책임감 있는 성격입니다.',
-  },
-  ISFJ: {
-    title: '용감한 수호자',
-    description:
-      '매우 헌신적이고 따뜻하며, 항상 사랑하는 사람들을 보호하려고 합니다.',
-  },
-  ESTJ: {
-    title: '엄격한 관리자',
-    description:
-      '체계적이고 직접적이며, 전통과 질서를 중요시하는 관리자입니다.',
-  },
-  ESFJ: {
-    title: '사교적인 외교관',
-    description:
-      '배려심이 많고 사교적이며, 인기 있고 항상 다른 사람을 돕고자 합니다.',
-  },
-  ISTP: {
-    title: '만능 재주꾼',
-    description:
-      '대담하고 실용적인 문제 해결사로, 다양한 도구를 능숙하게 다룹니다.',
-  },
-  ISFP: {
-    title: '호기심 많은 예술가',
-    description:
-      '친절하고 예술적이며, 항상 새로운 것을 경험하고자 하는 모험가입니다.',
-  },
-  ESTP: {
-    title: '모험을 즐기는 사업가',
-    description:
-      '스마트하고 에너지 넘치며, 위험을 감수하는 것을 두려워하지 않습니다.',
-  },
-  ESFP: {
-    title: '자유로운 영혼의 연예인',
-    description:
-      '자발적이고 에너지 넘치며, 인생을 즐기고 다른 사람들도 즐겁게 합니다.',
-  },
-};
-
 const resultArr = [
   {
     key: 'M',
@@ -273,7 +190,15 @@ const resultArr = [
       '기능성과 실용성 중시',
     ],
     img: ['스티브 잡스', '김태희', '전지현'],
-    mbti: ['INTJ', 'ISTP'],
+    youtube: {
+      name: '썅마이웨이',
+      icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
+      src: [
+        'https://www.youtube.com/embed/am8lwi8UEBQ',
+        'https://www.youtube.com/embed/hIkHQ6Tcdgs',
+        'https://www.youtube.com/embed/qX6-YDqSlso',
+      ],
+    },
   },
   {
     key: 'S',
@@ -288,7 +213,15 @@ const resultArr = [
       '대담한 색상과 패턴',
     ],
     img: ['지드래곤', '빌리 아일리시', '트래비스 스콧'],
-    mbti: ['ESTP', 'ENTP'],
+    youtube: {
+      name: '썅마이웨이',
+      icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
+      src: [
+        'https://www.youtube.com/embed/am8lwi8UEBQ',
+        'https://www.youtube.com/embed/hIkHQ6Tcdgs',
+        'https://www.youtube.com/embed/qX6-YDqSlso',
+      ],
+    },
   },
   {
     key: 'F',
@@ -303,7 +236,15 @@ const resultArr = [
       '절제된 액세서리',
     ],
     img: ['케이트 미들턴', '조지 클루니', '김희애'],
-    mbti: ['ENTJ', 'ISTJ'],
+    youtube: {
+      name: '썅마이웨이',
+      icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
+      src: [
+        'https://www.youtube.com/embed/am8lwi8UEBQ',
+        'https://www.youtube.com/embed/hIkHQ6Tcdgs',
+        'https://www.youtube.com/embed/qX6-YDqSlso',
+      ],
+    },
   },
   {
     key: 'C',
@@ -322,7 +263,15 @@ const resultArr = [
       'https://i.imgur.com/XEf0tYZ.jpg',
       'https://i.imgur.com/XEf0tYZ.jpg',
     ],
-    mbti: ['ISFJ', 'ESFJ'],
+    youtube: {
+      name: '썅마이웨이',
+      icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
+      src: [
+        'https://www.youtube.com/embed/am8lwi8UEBQ',
+        'https://www.youtube.com/embed/hIkHQ6Tcdgs',
+        'https://www.youtube.com/embed/qX6-YDqSlso',
+      ],
+    },
   },
   {
     key: 'A',
@@ -337,8 +286,16 @@ const resultArr = [
       '레이어드 스타일링',
     ],
     img: ['이나영', '정해인', '키무라 타쿠야'],
-    mbti: ['INFP', 'ISFP'],
+    youtube: {
+      name: '썅마이웨이',
+      icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
+      src: [
+        'https://www.youtube.com/embed/am8lwi8UEBQ',
+        'https://www.youtube.com/embed/hIkHQ6Tcdgs',
+        'https://www.youtube.com/embed/qX6-YDqSlso',
+      ],
+    },
   },
 ];
 
-export { questionArr, personalityScores, resultArr, mbtiDescriptions };
+export { questionArr, personalityScores, resultArr };
