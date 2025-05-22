@@ -1,0 +1,148 @@
+.hero {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-box {
+  position: absolute;
+  width: 50%;
+  height: 70%;
+  background-color: #ffffff; /* 흰색 배경 */
+  border-radius: 15px; /* 둥근 테두리 */
+  border-color: black;
+}
+.hero-content {
+  display: flex;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-title {
+  font-size: 2.7rem;
+  font-weight: bold;
+}
+.hero-subtitle {
+  font-size: 1.5rem;
+}
+.hero-detail {
+  margin-top: 5%;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.hero-background-image {
+  opacity: 0.3; /* 불투명도 0 ~ 1.0*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.background-image-group {
+  display: flex;
+  animation: scrollLeft 40s linear infinite;
+  /* 보이는 영역의 대략적인 배수로 설정 */
+  width: calc((20vw + 20px) * 5);
+  height: 50%;
+}
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-1 * (20vw + 20px) * 5));
+  }
+}
+
+.bg-image {
+  flex: 0 0 auto;
+  width: 20vw;
+  margin: 5px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 임시 색상부여 */
+  &:nth-child(5n-4) {
+    background: red;
+  }
+  &:nth-child(5n-3) {
+    background: orange;
+  }
+  &:nth-child(5n-2) {
+    background: green;
+  }
+  &:nth-child(5n-1) {
+    background: blue;
+  }
+  &:nth-child(5n-0) {
+    background: purple;
+  }
+}
+
+/* 시작하기 버튼 */
+.start-button {
+  padding: 3% 5%;
+  background-color: #20c997;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+.start-button:hover {
+  background-color: #17a589;
+  transform: translateY(-2px);
+  color: black;
+}
+
+.mobile-modal-main-button,
+.mobile-modal-about-button {
+  flex: 1 1 auto;
+  padding: 3% 0;
+  background-color: #20c997;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-modal-main-button:hover,
+.mobile-modal-about-button:hover {
+  background-color: #17a589;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .mobile-modal {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+  }
+
+  .mobile-modal-main-button,
+  .mobile-modal-about-button {
+    max-width: 80%;
+    width: 80%;
+  }
+}
