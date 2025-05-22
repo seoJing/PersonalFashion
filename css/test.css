@@ -82,7 +82,7 @@
 .select-button-2:hover {
   background-color: #08404b;
   /* transform: translateY(-2px); */
-  transform:scale(1.05);
+  transform: scale(1.05);
 }
 .result-button {
   display: block;
@@ -113,7 +113,7 @@
 .progress-list li {
   justify-content: center;
   font-size: 0.7rem;
-  margin-bottom:4%;
+  margin-bottom: 4%;
 }
 .progress-list li a {
   pointer-events: none; /* 기본적으로 클릭 막힘 */
@@ -121,12 +121,12 @@
   text-decoration: none;
   cursor: default;
   transition: 0.3s ease;
-  padding:2%;
+  padding: 2%;
 }
 .progress-list li.answered a {
   pointer-events: auto; /* 응답된 질문만 클릭 허용 */
   color: #87d4e3;
-  font-size:0.8rem;
+  font-size: 0.8rem;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -145,8 +145,8 @@ html {
   top: 20%;
   left: 7.5%;
 }
-.progress-detail h5{
-  margin:2% 0;
+.progress-detail h5 {
+  margin: 2% 0;
 }
 .progress-bar-wrapper {
   width: 100%;
@@ -167,4 +167,40 @@ html {
   text-align: right;
   display: none;
   color: #333;
+}
+
+.mobile-modal-main-button,
+.mobile-modal-about-button {
+  flex: 1 1 auto;
+  padding: 3% 0;
+  background-color: #20c997;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-modal-main-button:hover,
+.mobile-modal-about-button:hover {
+  background-color: #17a589;
+  color: black;
+}
+
+@media (max-width: 767px) {
+  .mobile-modal {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+  }
+
+  .mobile-modal-main-button,
+  .mobile-modal-about-button {
+    max-width: 80%;
+    width: 80%;
+  }
 }
