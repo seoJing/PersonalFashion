@@ -1,0 +1,58 @@
+/* 시작하기 버튼 */
+.start-button {
+  padding: 3% 5%;
+  background-color: #20c997;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+}
+.start-button:hover {
+  background-color: #17a589;
+  color: black;
+}
+
+.mobile-modal-main-button,
+.mobile-modal-about-button {
+  flex: 1 1 auto;
+  padding: 3% 0;
+  background-color: #20c997;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-modal-main-button:hover,
+.mobile-modal-about-button:hover {
+  background-color: #17a589;
+  color: black;
+}
+
+@media (max-width: 767px) {
+  .mobile-modal {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+  }
+
+  .mobile-modal-main-button,
+  .mobile-modal-about-button {
+    max-width: 80%;
+    width: 80%;
+  }
+}

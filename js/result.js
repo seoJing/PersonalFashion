@@ -155,20 +155,49 @@ function initSwiper() {
 
   // 그 다음 부모 스위퍼 초기화
   const mainSwiper = new Swiper('#main-container', {
-    slidesPerView: 3,
     centeredSlides: true,
     slideToClickedSlide: true,
     initialSlide: 1,
-    effect: 'coverflow',
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 100,
-      modifier: 2,
-      slideShadows: false,
-      scale: 0.85,
+
+      breakpoints: {
+      0: { // 0px부터 767px까지
+        slidesPerView: 1, // 모바일에서는 1개 슬라이드
+        effect:'coverflow',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2,
+          slideShadows: false,
+          scale: 0.85,
+        },
+      },
+      768: {
+        slidesPerView: 3, // 태블릿에서는 3개 슬라이드
+        effect:'coverflow',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2,
+          slideShadows: false,
+          scale: 0.85,
+        },
+      },
+      1024: {
+        slidesPerView: 3, // PC에서는 3개 슬라이드
+        effect:'coverflow',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2,
+          slideShadows: false,
+          scale: 0.85,
+        },
+      },
     },
-  });
+    });
 }
 
 // 초기화 및 실행
