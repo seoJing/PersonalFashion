@@ -259,9 +259,9 @@ const resultArr = [
       '자연스러운 액세서리',
     ],
     img: [
-      'https://i.imgur.com/XEf0tYZ.jpg',
-      'https://i.imgur.com/XEf0tYZ.jpg',
-      'https://i.imgur.com/XEf0tYZ.jpg',
+      'https://imgur.com/nWNDKEp.png',
+      'https://imgur.com/a/NSKOgUu.png',
+      'https://imgur.com/a/NSKOgUu.jpg',
     ],
     youtube: {
       name: '썅마이웨이',
