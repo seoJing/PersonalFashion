@@ -3,18 +3,18 @@ import { createElement } from './createElementHelper.js';
 
 // DOM 요소 선택
 const progressList = document.querySelector('.progress-list');
-const progressContainer = document.querySelector('.progress-container');
+const swiperWrapper = document.querySelector('.swiper-wrapper');
 
 // 상태 관리 변수
 let selectedIndexes = Array(questionArr.length).fill(null);
 let answeredCount = 0;
+let isDone = false;
 let recomendStyleArr;
 let swiper;
+let resultSlideCreated = false; // 결과 슬라이드 생성 여부 체크
 
 // Swiper 초기화 함수
 function initSwiper() {
-  const swiperWrapper = document.querySelector('.swiper-wrapper');
-
   questionArr.forEach((item, index) => {
     const slide = createElement('div', ['swiper-slide'], '', `slide${index}`);
 
@@ -56,6 +56,9 @@ function initSwiper() {
     swiperWrapper.appendChild(slide);
   });
 
+  // 초기 결과 슬라이드 생성 (미완료 상태)
+  createResultSlide();
+
   swiper = new Swiper('.swiper-container', {
     direction: 'vertical',
     slidesPerView: 3,
@@ -74,26 +77,72 @@ function initSwiper() {
   });
 }
 
-// 결과 페이지로 이동하는 버튼 생성 함수
-function createResultButton() {
-  const resultButton = createElement('button', 'result-button', '결과보기');
+// 결과 페이지로 이동하는 슬라이드 생성 함수
+function createResultSlide() {
+  if (resultSlideCreated) return; // 이미 생성된 경우 리턴
 
-  resultButton.addEventListener('click', () => {
-    // 성격 점수 계산
-    calculatePersonalityScores();
+  const toResultSlide = createElement(
+    'div',
+    ['swiper-slide'],
+    '',
+    `slideResult` // 고유한 ID 사용
+  );
+  const question = createElement('div', 'question');
+  const questionNumberSpan = createElement(
+    'h4',
+    'question-number',
+    '아직 모든 답변에 응답하지 않았어요'
+  );
+  const questionTextSpan = createElement(
+    'span',
+    'question-text',
+    '모든 답변에 응답해야 결과를 볼 수 있어요'
+  );
 
-    // 결과 정렬 및 페이지 이동
-    recomendStyleArr = Object.entries(personalityScores).sort(
-      (a, b) => b[1] - a[1]
-    );
+  question.append(questionNumberSpan, questionTextSpan);
+  toResultSlide.append(question);
+  swiperWrapper.appendChild(toResultSlide);
 
-    // 결과 데이터를 URL 매개변수로 전달
-    window.location.href = `./result.html?data=${btoa(
-      JSON.stringify(recomendStyleArr)
-    )}`;
-  });
+  resultSlideCreated = true;
+}
 
-  progressContainer.appendChild(resultButton);
+// 결과 슬라이드 업데이트 함수
+function updateResultSlide() {
+  const resultSlide = document.querySelector('#slideResult');
+  if (!resultSlide) return;
+
+  const questionNumberSpan = resultSlide.querySelector('.question-number');
+  const questionTextSpan = resultSlide.querySelector('.question-text');
+  const question = resultSlide.querySelector('.question');
+
+  // 기존 결과 버튼 제거 (있다면)
+  const existingButton = resultSlide.querySelector('.result-button');
+  if (existingButton) {
+    existingButton.remove();
+  }
+
+  if (isDone) {
+    questionNumberSpan.innerText = '모든 질문이 끝났어요';
+    questionTextSpan.innerText = '무슨 결과가 나올까요?';
+
+    const resultButton = createElement('button', 'result-button', '결과보기');
+    resultButton.addEventListener('click', () => {
+      // 성격 점수 계산
+      calculatePersonalityScores();
+
+      // 결과 정렬 및 페이지 이동
+      recomendStyleArr = Object.entries(personalityScores).sort(
+        (a, b) => b[1] - a[1]
+      );
+
+      // 결과 데이터를 URL 매개변수로 전달
+      window.location.href = `./result.html?data=${btoa(
+        JSON.stringify(recomendStyleArr)
+      )}`;
+    });
+
+    resultSlide.append(resultButton);
+  }
 }
 
 // 성격 점수 계산 함수
@@ -136,16 +185,23 @@ function handleButtonClick(optionIndex, e, slideIndex) {
 
   // 진행 상태 업데이트
   const progressLi = document.querySelector(`.progress-item-${slideIndex}`);
-  progressLi.classList.add('answered');
+  if (progressLi) {
+    progressLi.classList.add('answered');
+  }
   updateProgress();
 
   // 모든 질문에 응답했는지 확인
-  if (answeredCount < questionArr.length) {
-    // 다음 슬라이드로 이동
+  if (answeredCount >= questionArr.length) {
+    isDone = true;
+    updateResultSlide(); // 결과 슬라이드 업데이트
+  }
+
+  // 다음 슬라이드로 이동 (마지막 질문이 아닌 경우)
+  if (slideIndex < questionArr.length - 1) {
     swiper.slideNext();
-  } else if (!document.querySelector('.result-button')) {
-    // 모든 질문에 응답했고 결과 버튼이 없으면 생성
-    createResultButton();
+  } else if (isDone) {
+    // 마지막 질문이고 모든 답변이 완료된 경우 결과 슬라이드로 이동
+    swiper.slideTo(swiper.slides.length - 1);
   }
 }
 

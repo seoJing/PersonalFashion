@@ -193,11 +193,7 @@ const resultArr = [
     youtube: {
       name: '썅마이웨이',
       icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
-      src: [
-        'https://www.youtube.com/embed/am8lwi8UEBQ',
-        'https://www.youtube.com/embed/hIkHQ6Tcdgs',
-        'https://www.youtube.com/embed/qX6-YDqSlso',
-      ],
+      src: 'https://www.youtube.com/embed/am8lwi8UEBQ',
     },
   },
   {
@@ -216,11 +212,7 @@ const resultArr = [
     youtube: {
       name: '썅마이웨이',
       icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
-      src: [
-        'https://www.youtube.com/embed/am8lwi8UEBQ',
-        'https://www.youtube.com/embed/hIkHQ6Tcdgs',
-        'https://www.youtube.com/embed/qX6-YDqSlso',
-      ],
+      src: 'https://www.youtube.com/embed/am8lwi8UEBQ',
     },
   },
   {
@@ -239,11 +231,7 @@ const resultArr = [
     youtube: {
       name: '썅마이웨이',
       icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
-      src: [
-        'https://www.youtube.com/embed/am8lwi8UEBQ',
-        'https://www.youtube.com/embed/hIkHQ6Tcdgs',
-        'https://www.youtube.com/embed/qX6-YDqSlso',
-      ],
+      src: 'https://www.youtube.com/embed/am8lwi8UEBQ',
     },
   },
   {
@@ -266,11 +254,7 @@ const resultArr = [
     youtube: {
       name: '썅마이웨이',
       icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
-      src: [
-        'https://www.youtube.com/embed/am8lwi8UEBQ',
-        'https://www.youtube.com/embed/hIkHQ6Tcdgs',
-        'https://www.youtube.com/embed/qX6-YDqSlso',
-      ],
+      src: 'https://www.youtube.com/embed/am8lwi8UEBQ',
     },
   },
   {
@@ -289,11 +273,7 @@ const resultArr = [
     youtube: {
       name: '썅마이웨이',
       icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
-      src: [
-        'https://www.youtube.com/embed/am8lwi8UEBQ',
-        'https://www.youtube.com/embed/hIkHQ6Tcdgs',
-        'https://www.youtube.com/embed/qX6-YDqSlso',
-      ],
+      src: 'https://www.youtube.com/embed/am8lwi8UEBQ',
     },
   },
 ];

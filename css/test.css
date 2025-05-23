@@ -190,6 +190,9 @@ html {
   background-color: #17a589;
   color: black;
 }
+.mobile-result-button {
+  display: none;
+}
 
 @media (max-width: 767px) {
   .mobile-modal {
@@ -197,10 +200,40 @@ html {
     align-items: center;
     gap: 2vh;
   }
-
   .mobile-modal-main-button,
   .mobile-modal-about-button {
     max-width: 80%;
     width: 80%;
+  }
+  .progress-container {
+    display: none;
+  }
+
+  .hero {
+    left: 0;
+    width: 90%;
+  }
+  .select-button-container {
+    margin: 5%;
+  }
+  .select-button-1,
+  .select-button-2 {
+    width: 90%;
+    padding: 4%;
+    margin: 1%;
+    border: none;
+    border-radius: 15px;
+    font-size: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #0d6475;
+    color: white;
+    position: relative;
+  }
+
+  .selected {
+    background-color: #1ca2bd;
   }
 }
