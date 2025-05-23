@@ -1,7 +1,5 @@
-// 모바일 여부 확인 (터치 포인트와 화면 크기 모두 고려)
-const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
-const isSmallScreen = window.innerWidth <= 768; // 768px 이하를 모바일로 간주
-const isMobile = isTouchDevice || isSmallScreen;
+// 모바일 여부 확인 (화면 크기 고려)
+export const isMobile = window.innerWidth <= 768 ? true : false; // 768px 이하를 모바일로 간주
 
 // 버튼 요소 선택
 const startButton = document.querySelector('.start-button');
@@ -68,14 +66,3 @@ if (isMobile) {
   // 데스크톱 환경 설정
   $mobileModalOpenButton.hide();
 }
-
-// 화면 크기 변경 시 모바일 여부 재확인
-window.addEventListener('resize', () => {
-  const newIsSmallScreen = window.innerWidth <= 768;
-  const newIsMobile = isTouchDevice || newIsSmallScreen;
-
-  // 모바일 상태가 변경된 경우에만 UI 업데이트
-  if (newIsMobile !== isMobile) {
-    location.reload(); // 간단하게 페이지 새로고침으로 처리
-  }
-});

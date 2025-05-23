@@ -190,10 +190,9 @@ html {
   background-color: #17a589;
   color: black;
 }
-.mobile-result-button{
-  display:none;
+.mobile-result-button {
+  display: none;
 }
-
 
 @media (max-width: 767px) {
   .mobile-modal {
@@ -206,18 +205,16 @@ html {
     max-width: 80%;
     width: 80%;
   }
-  .progress-container{
-    display:none;
-  }
-  .swiper-container{
+  .progress-container {
+    display: none;
   }
 
-  .hero{
-    left:0;
-    width:90%;
-    }
-  .select-button-container{
-    margin:5%
+  .hero {
+    left: 0;
+    width: 90%;
+  }
+  .select-button-container {
+    margin: 5%;
   }
   .select-button-1,
   .select-button-2 {
@@ -235,20 +232,8 @@ html {
     color: white;
     position: relative;
   }
-.mobile-result-button {
-  bottom:17.5%;
-  position:fixed;
-  display: block;
-  z-index:100;
-  padding: 10px 20px;
-  font-size: 1.7rem;
-  font-weight: bold;
-  background-color: #0d6475;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
 
-
+  .selected {
+    background-color: #1ca2bd;
+  }
 }

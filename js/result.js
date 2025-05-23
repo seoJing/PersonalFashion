@@ -1,4 +1,5 @@
 import { resultArr } from './db.js';
+import { isMobile } from './index.js';
 
 // DOM 요소 선택
 const heroTitle = document.querySelector('.hero-title');
@@ -24,7 +25,7 @@ const secondStyleImg3 = document.querySelector('.second-style-img3');
 
 const youtubeTitle = document.querySelector('.youtube-title');
 const youtubeName = document.querySelector('.youtube-name');
-const youtubeVideo = document.querySelectorAll('.youtube-video');
+const youtubeVideo = document.querySelector('.youtube-video');
 const youtubeIcon = document.querySelector('.youtube-icon');
 
 // URL 파라미터 파싱
@@ -102,13 +103,7 @@ function setSecondStyleContent(style) {
 function setYoutubeContent(style) {
   youtubeTitle.innerText = `${style.title}과 관련된 유튜브`;
   youtubeName.innerText = style.youtube.name;
-
-  youtubeVideo.forEach((element, index) => {
-    if (style.youtube.src[index]) {
-      element.src = style.youtube.src[index];
-    }
-  });
-
+  youtubeVideo.src = style.youtube.src;
   youtubeIcon.src = style.youtube.icon;
 }
 
@@ -137,71 +132,30 @@ function setupButtons(style, data) {
   });
 }
 
+function moblieRandering() {}
+
 // 스위퍼 초기화
 function initSwiper() {
-  // 먼저 중첩된 자식 스위퍼를 초기화
-  const nestedSwiper = new Swiper('.swiper-container-nested', {
-    pagination: {
-      el: '.swiper-pagination-nested',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.youtube-next',
-      prevEl: '.youtube-prev',
-    },
-    slidesPerView: 1,
-    loop: true,
-  });
-
-  // 그 다음 부모 스위퍼 초기화
   const mainSwiper = new Swiper('#main-container', {
     centeredSlides: true,
     slideToClickedSlide: true,
     initialSlide: 1,
-
-      breakpoints: {
-      0: { // 0px부터 767px까지
-        slidesPerView: 1, // 모바일에서는 1개 슬라이드
-        effect:'coverflow',
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2,
-          slideShadows: false,
-          scale: 0.85,
-        },
-      },
-      768: {
-        slidesPerView: 3, // 태블릿에서는 3개 슬라이드
-        effect:'coverflow',
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2,
-          slideShadows: false,
-          scale: 0.85,
-        },
-      },
-      1024: {
-        slidesPerView: 3, // PC에서는 3개 슬라이드
-        effect:'coverflow',
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2,
-          slideShadows: false,
-          scale: 0.85,
-        },
-      },
+    slidesPerView: 3,
+    effect: 'coverflow',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 2,
+      slideShadows: false,
+      scale: 0.85,
     },
-    });
+  });
 }
 
 // 초기화 및 실행
 document.addEventListener('DOMContentLoaded', () => {
   loadResultData();
-  initSwiper();
+  if (isMobile) moblieRandering();
+  else initSwiper();
 });
