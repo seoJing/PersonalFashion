@@ -1,5 +1,5 @@
 // 모바일 여부 확인 (화면 크기 고려)
-export const isMobile = window.innerWidth <= 768 ? true : false; // 768px 이하를 모바일로 간주
+export const isMobile = window.innerWidth <= 959 ? true : false; // 959px 이하를 모바일로 간주
 
 // 버튼 요소 선택
 const startButton = document.querySelector('.start-button');
