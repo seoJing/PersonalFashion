@@ -24,15 +24,17 @@
   text-align: center;
 }
 .hero-title {
-  font-size: 2.7rem;
+  font-size: 4vw;
+  margin:0;
   font-weight: bold;
 }
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 2vw;
+  margin: 2vw 0;
 }
 .hero-detail {
   margin-top: 5%;
-  font-size: 1.1rem;
+  font-size: 1.8vw;
   font-weight: bold;
 }
 
@@ -63,12 +65,12 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(calc(-1 * (20vw + 20px) * 5));
+    transform: translateX(calc(-1 * (20vw + 10px) * 5));
   }
 }
 @keyframes scrollRight {
   0% {
-    transform: translateX(calc(-1 * (20vw + 20px) * 5));
+    transform: translateX(calc(-1 * (20vw + 10px) * 5));
   }
   100% {
     transform: translateX(0%);
@@ -82,26 +84,17 @@
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
+  overflow:hidden;
   justify-content: center;
   align-items: center;
-
-  /* 임시 색상부여 */
-  &:nth-child(5n-4) {
-    background: red;
-  }
-  &:nth-child(5n-3) {
-    background: orange;
-  }
-  &:nth-child(5n-2) {
-    background: green;
-  }
-  &:nth-child(5n-1) {
-    background: blue;
-  }
-  &:nth-child(5n-0) {
-    background: purple;
-  }
+  position:relative;
 }
+
+  .bg-image img{
+    max-width:100%;
+    height:100%;
+    object-fit:cover;
+  }
 
 /* 시작하기 버튼 */
 .start-button {
@@ -110,7 +103,7 @@
   color: #fff;
   border: none;
   border-radius: 20px;
-  font-size: 1.9rem;
+  font-size: 2.5vw;
   font-weight: bold;
   cursor: pointer;
   justify-content: center;
@@ -123,26 +116,27 @@
   color: black;
 }
 
-/* 모바일 */
+/* ㅡㅡㅡㅡㅡㅡ모바일ㅡㅡㅡㅡㅡㅡ */
 @media screen and (max-width: 767px) {
   .hero-box {
-    width: 80%;
-    height: 60%;
+    width: 80vw;
+    height: 50vh;
   }
   .hero-title {
-    font-size: 2rem;
+    font-size: 8vw;
     margin: 5%;
   }
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 4.5vw;
     margin: 5%;
   }
   .hero-detail {
-    font-size: 0.9rem;
+    font-size: 3vw;
     margin: 5%;
   }
   .start-button {
-    scale: 0.9;
+    font-size:4vw;
+    scale: 1.2;
     margin: 5%;
   }
   .hero-background-image {
@@ -195,22 +189,26 @@
   }
 }
 
-/* 태블릿 */
+/* ㅡㅡㅡㅡㅡㅡ태블릿ㅡㅡㅡㅡㅡㅡ */
 @media screen and (min-width: 768px) and (max-width: 959px) {
   .hero-box {
-    width: 70%;
+    width: 70vw;
+    height:50vh;
   }
   .hero-title {
-    font-size: 2.4rem;
+    font-size: 7vw;
+    margin:0;
   }
   .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 4vw;
   }
   .hero-detail {
-    font-size: 1rem;
+    font-size: 3vw;
   }
   .start-button {
-    scale: 0.95;
+    font-size:3vw;
+    scale: 1.4;
+    margin: 4%;
   }
   .background-image-group {
     display: flex;
@@ -273,7 +271,7 @@
   color: black;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 959px) {
   .mobile-modal {
     flex-direction: column;
     align-items: center;
@@ -284,5 +282,8 @@
   .mobile-modal-about-button {
     max-width: 80%;
     width: 80%;
+  }
+  .bg-image img{
+    height:100%;
   }
 }

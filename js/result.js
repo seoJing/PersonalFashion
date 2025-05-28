@@ -1,13 +1,14 @@
 import { resultArr } from './db.js';
-import { isMobile } from './index.js';
+import { isMobile } from './index.js'; // isMobile 변수 그대로 사용
 
 // DOM 요소 선택
-const heroTitle = document.querySelector('.hero-title');
+const heroSubtitle = document.querySelector('.hero-subtitle');
 const heroDescription = document.querySelector('.hero-description');
-const heroCharacteristics = document.querySelector('.hero-characteristics');
-const heroImg1 = document.querySelector('.hero-img1');
-const heroImg2 = document.querySelector('.hero-img2');
-const heroImg3 = document.querySelector('.hero-img3');
+
+const heroImageSrc1 = document.querySelector('.hero-img1 img');
+const heroImageSrc2 = document.querySelector('.hero-img2 img');
+const heroImageSrc3 = document.querySelector('.hero-img3 img');
+
 
 const restartButton = document.querySelector('.restart-button');
 const shareButton = document.querySelector('.share-button');
@@ -16,19 +17,18 @@ const secondStyleSubtitle = document.querySelector('.second-style-subtitle');
 const secondStyleDescription = document.querySelector(
   '.second-style-description'
 );
-const secondStyleCharacteristics = document.querySelector(
-  '.second-style-characteristics'
-);
-const secondStyleImg1 = document.querySelector('.second-style-img1');
-const secondStyleImg2 = document.querySelector('.second-style-img2');
-const secondStyleImg3 = document.querySelector('.second-style-img3');
+
+const secondStyleImageSrc1 = document.querySelector('.second-style-img1 img'); 
+const secondStyleImageSrc2 = document.querySelector('.second-style-img2 img'); 
+const secondStyleImageSrc3 = document.querySelector('.second-style-img3 img'); 
+
 
 const youtubeTitle = document.querySelector('.youtube-title');
 const youtubeName = document.querySelector('.youtube-name');
 const youtubeVideo = document.querySelector('.youtube-video');
 const youtubeIcon = document.querySelector('.youtube-icon');
 
-// URL 파라미터 파싱
+// URL 파라미터 파싱 (수정 없음)
 function parseUrlData() {
   const urlParams = new URLSearchParams(window.location.search);
   const encodedData = urlParams.get('data');
@@ -46,7 +46,7 @@ function parseUrlData() {
   }
 }
 
-// 결과 데이터 로드 및 표시
+// 결과 데이터 로드 및 표시 (수정 없음)
 function loadResultData() {
   const decodeData = parseUrlData();
 
@@ -71,32 +71,24 @@ function loadResultData() {
   setupButtons(firstRecomendStyle, decodeData);
 }
 
-// 첫 번째 추천 스타일 콘텐츠 설정
+
 function setFirstStyleContent(style) {
-  heroTitle.innerText = style.title;
+  document.querySelector('.hero-title').innerText = '당신과 어울리는 스타일은?';
+  heroSubtitle.innerText = style.title;
   heroDescription.innerText = style.description;
 
-  const characteristicsList = document.createElement('ul');
-  style.characteristics.forEach((characteristic) => {
-    const listItem = document.createElement('li');
-    listItem.textContent = characteristic;
-    characteristicsList.appendChild(listItem);
-  });
-  heroCharacteristics.appendChild(characteristicsList);
-
-  heroImg1.src = style.img[0];
-  heroImg2.src = style.img[1];
-  heroImg3.src = style.img[2];
+  heroImageSrc1.src = style.img[0];
+  heroImageSrc2.src = style.img[1];
+  heroImageSrc3.src = style.img[2];
 }
 
-// 두 번째 추천 스타일 콘텐츠 설정
 function setSecondStyleContent(style) {
+  document.querySelector('.second-style-title').innerText = '이런 스타일은 어때요?';
   secondStyleSubtitle.innerText = style.title;
-  secondStyleImg1.src = '../img/' + style.img[0];
-  secondStyleImg2.src = '../img/' + style.img[1];
-  secondStyleImg3.src = '../img/' + style.img[2];
+  secondStyleImageSrc1.src = style.img[0];
+  secondStyleImageSrc2.src = style.img[1];
+  secondStyleImageSrc3.src = style.img[2];
   secondStyleDescription.innerText = style.description;
-  secondStyleCharacteristics.innerText = style.characteristics;
 }
 
 // 유튜브 콘텐츠 설정
@@ -105,6 +97,9 @@ function setYoutubeContent(style) {
   youtubeName.innerText = style.youtube.name;
   youtubeVideo.src = style.youtube.src;
   youtubeIcon.src = style.youtube.icon;
+  youtubeIcon.addEventListener('click', () => {
+    window.open(style.youtube.link);
+  });
 }
 
 // 버튼 이벤트 설정
@@ -132,7 +127,33 @@ function setupButtons(style, data) {
   });
 }
 
-function moblieRandering() {}
+function moblieRandering() {
+  const mainWrapper = document.getElementById('main-wrapper');
+  const mainSlideFirst = document.getElementById('main-slide-first');
+  const mainSlideSecond = document.getElementById('main-slide-second');
+  const mainSlideYoutube = document.getElementById('main-slide-youtube');
+  const heroBox = document.querySelector('.hero-box');
+
+  const swiperContainer = document.getElementById('main-container');
+  if (swiperContainer) {
+    swiperContainer.classList.remove('swiper-container');
+    swiperContainer.classList.remove('swiper-initialized');
+    swiperContainer.classList.remove('swiper-horizontal');
+  }
+
+  // 모바일에서 슬라이드 순서를 1-2-3으로 재배치
+  if (mainWrapper && mainSlideFirst && mainSlideSecond && mainSlideYoutube) {
+    mainWrapper.innerHTML = '';
+    mainWrapper.appendChild(mainSlideFirst); 
+    mainWrapper.appendChild(mainSlideSecond);
+    mainWrapper.appendChild(mainSlideYoutube);
+  }
+
+  const mainSection = document.getElementById('main-section');
+  if (mainSection && heroBox) {
+    mainSection.appendChild(heroBox);
+  }
+}
 
 // 스위퍼 초기화
 function initSwiper() {

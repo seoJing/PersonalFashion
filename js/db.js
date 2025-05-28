@@ -1,43 +1,43 @@
 const questionArr = [
   {
     questionNum: 1,
-    questionText: '첫 만남에 셔츠를 입고 나간다면?',
+    questionText: '첫 만남에 셔츠는 어때?',
     option: [
       {
         text: '너무 차려입고 나가나..?',
-        impact: { C: 2, S: 1, F: 0, A: 0 },
+        impact: { C: 2, S: 1, M: 0, A: 0 },
       },
       {
         text: '무난하고 좋은데?',
-        impact: { C: 0, S: 0, F: 2, A: 1 },
+        impact: { C: 0, S: 0, M: 2, A: 1 },
       },
     ],
   },
   {
     questionNum: 2,
-    questionText: '신입생 오티날 청바지, 맨투맨 어떻게 생각해?',
+    questionText: '신입생 오티날 청바지에 맨투맨은 어때?',
     option: [
       {
         text: '너무 안꾸민거 아니야?',
-        impact: { C: 0, S: 2, F: 0, A: 1 },
+        impact: { C: 0, S: 2, M: 0, A: 1 },
       },
       {
         text: '편하고 좋네',
-        impact: { C: 2, S: 0, F: 1, A: 0 },
+        impact: { C: 2, S: 0, M: 1, A: 0 },
       },
     ],
   },
   {
     questionNum: 3,
-    questionText: '어떤 신발을 더 즐겨신어?',
+    questionText: '어떤 신발을 더 선호해?',
     option: [
       {
         text: '로퍼, 더비, 첼시부츠 같은 구두',
-        impact: { C: 0, S: 0, F: 2, A: 1 },
+        impact: { C: 0, S: 0, M: 2, A: 1 },
       },
       {
         text: '스니커즈나 운동화',
-        impact: { C: 2, S: 1, F: 0, A: 0 },
+        impact: { C: 2, S: 1, M: 0, A: 0 },
       },
     ],
   },
@@ -46,12 +46,12 @@ const questionArr = [
     questionText: '어떤 가방이 더 좋아?',
     option: [
       {
-        text: '백팩, 크로스백 같이 실용적인 가방',
-        impact: { C: 2, S: 1, F: 0, A: 0 },
+        text: '백팩이나 크로스백',
+        impact: { C: 2, S: 1, M: 0, A: 0 },
       },
       {
-        text: '토트백, 숄더백 같이 스타일리시한 가방',
-        impact: { C: 0, S: 0, F: 2, A: 1 },
+        text: '토트백이나 숄더백',
+        impact: { C: 0, S: 0, M: 2, A: 1 },
       },
     ],
   },
@@ -61,11 +61,11 @@ const questionArr = [
     option: [
       {
         text: '코트나 블레이저?',
-        impact: { C: 0, S: 0, F: 2, A: 1 },
+        impact: { C: 0, S: 0, M: 2, A: 1 },
       },
       {
         text: '후드티, 바람막이같이 편안한 아우터',
-        impact: { C: 2, S: 1, F: 0, A: 0 },
+        impact: { C: 2, S: 1, M: 0, A: 0 },
       },
     ],
   },
@@ -75,11 +75,11 @@ const questionArr = [
     option: [
       {
         text: '간단하게 후드티나 입고 나가자',
-        impact: { C: 2, S: 0, F: 0, A: 0 },
+        impact: { C: 2, S: 0, M: 0, A: 0 },
       },
       {
         text: '이왕 나가는 거 예쁘게 입자',
-        impact: { C: 0, S: 2, F: 1, A: 2 },
+        impact: { C: 0, S: 2, M: 1, A: 2 },
       },
     ],
   },
@@ -89,11 +89,11 @@ const questionArr = [
     option: [
       {
         text: '기본템',
-        impact: { C: 1, S: 0, F: 2, A: 0 },
+        impact: { C: 1, S: 0, M: 2, A: 0 },
       },
       {
         text: '개성템',
-        impact: { C: 0, S: 2, F: 0, A: 1 },
+        impact: { C: 0, S: 2, M: 0, A: 1 },
       },
     ],
   },
@@ -103,11 +103,11 @@ const questionArr = [
     option: [
       {
         text: '느낌있는',
-        impact: { C: 0, S: 2, F: 1, A: 0 },
+        impact: { C: 0, S: 2, M: 1, A: 0 },
       },
       {
         text: '편안한',
-        impact: { C: 2, S: 0, F: 0, A: 1 },
+        impact: { C: 2, S: 0, M: 0, A: 1 },
       },
     ],
   },
@@ -117,11 +117,11 @@ const questionArr = [
     option: [
       {
         text: '단정한 슬랙스와 셔츠',
-        impact: { C: 0, S: 0, F: 2, A: 1 },
+        impact: { C: 0, S: 0, M: 2, A: 1 },
       },
       {
         text: '캐주얼한 와이드 팬츠와 후드',
-        impact: { C: 2, S: 1, F: 0, A: 0 },
+        impact: { C: 2, S: 1, M: 0, A: 0 },
       },
     ],
   },
@@ -131,11 +131,11 @@ const questionArr = [
     option: [
       {
         text: '목걸이나 반지',
-        impact: { C: 0, S: 2, F: 0, A: 0 },
+        impact: { C: 0, S: 2, M: 0, A: 0 },
       },
       {
         text: '스마트워치나 손목시계',
-        impact: { C: 1, S: 0, F: 2, A: 2 },
+        impact: { C: 1, S: 0, M: 2, A: 2 },
       },
     ],
   },
@@ -145,11 +145,11 @@ const questionArr = [
     option: [
       {
         text: '금액이 저렴해야지!',
-        impact: { C: 1, S: 1, F: 1, A: 1 },
+        impact: { C: 1, S: 1, M: 1, A: 1 },
       },
       {
         text: '비싸도 예쁘면 장떙!',
-        impact: { C: 1, S: 1, F: 1, A: 1 },
+        impact: { C: 1, S: 1, M: 1, A: 1 },
       },
     ],
   },
@@ -159,11 +159,11 @@ const questionArr = [
     option: [
       {
         text: '카키, 브라운, 버건디',
-        impact: { C: 0, S: 0, F: 2, A: 2 },
+        impact: { C: 0, S: 0, M: 2, A: 2 },
       },
       {
         text: '블루, 레드, 그린, 베이지',
-        impact: { C: 2, S: 2, F: 0, A: 0 },
+        impact: { C: 2, S: 2, M: 0, A: 0 },
       },
     ],
   },
@@ -172,7 +172,7 @@ const questionArr = [
 const personalityScores = {
   C: 0,
   S: 0,
-  F: 0,
+  M: 0,
   A: 0,
 };
 
@@ -181,99 +181,68 @@ const resultArr = [
     key: 'M',
     title: '미니멀 스타일',
     description:
-      '심플하고 깔끔한 라인과 중립적인 색상을 선호하는 미니멀 스타일은 당신에게 잘 어울립니다. 불필요한 장식을 최소화하고 기본에 충실한 이 스타일은 세련되고 시간이 지나도 변하지 않는 클래식함을 추구합니다.',
-    characteristics: [
-      '깔끔한 라인과 실루엣',
-      '중립적인 색상 (검정, 흰색, 베이지, 그레이)',
-      '고품질 소재와 좋은 핏',
-      '최소한의 액세서리',
-      '기능성과 실용성 중시',
+      '절제와 단순함을 추구하는 미니멀 스타일은 깔끔하고, 단정된 이미지를 주기에 가장 적합합니다.',
+    img: [
+      'm1img.png',
+      'm2img.png',
+      'm3img.png'
     ],
-    img: ['스티브 잡스', '김태희', '전지현'],
     youtube: {
-      name: '썅마이웨이',
-      icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
-      src: 'https://www.youtube.com/embed/am8lwi8UEBQ',
+      name: '패션튜브삭형',
+      link: 'https://www.youtube.com/@%ED%8C%A8%EC%85%98%ED%8A%9C%EB%B8%8C%EC%82%AD%ED%98%95' ,
+      icon: 'https://yt3.googleusercontent.com/ytc/AIdro_neit_841a8Hd8mBWlTVrFf7ZrhDJTdb25wyPPr1w2nxjE=s160-c-k-c0x00ffffff-no-rj',
+      src: 'https://youtube.com/embed/R3qY2GHHErY',
     },
   },
   {
     key: 'S',
     title: '스트릿 스타일',
     description:
-      '도시적이고 트렌디한 스트릿 스타일은 당신의 개성과 자유로운 정신을 표현하기에 완벽합니다. 편안함과 스타일을 동시에 추구하는 이 패션은 자신만의 독특한 감각을 보여줄 수 있습니다.',
-    characteristics: [
-      '오버사이즈 실루엣',
-      '레이어링 기법',
-      '그래픽 티셔츠와 후드티',
-      '스니커즈와 캡모자',
-      '대담한 색상과 패턴',
+      '색깔이 뚜렷한 스트릿 스타일은 다양한 색감과 패턴으로 자신만의 스타일과 개성을 마음껏 뽐낼 수 있습니다.',
+    img: [
+      's1img.png',
+      's2img.png',
+      's3img.png'
     ],
-    img: ['지드래곤', '빌리 아일리시', '트래비스 스콧'],
     youtube: {
-      name: '썅마이웨이',
-      icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
-      src: 'https://www.youtube.com/embed/am8lwi8UEBQ',
-    },
-  },
-  {
-    key: 'F',
-    title: '포멀 스타일',
-    description:
-      '세련되고 우아한 클래식 스타일은 당신의 안정적이고 성숙한 이미지를 완성시켜 줍니다. 시간이 지나도 변하지 않는 품격과 정제된 아름다움을 추구하는 이 스타일은 전문적이고 신뢰감 있는 인상을 줍니다.',
-    characteristics: [
-      '테일러드 재킷과 코트',
-      '깔끔한 셔츠와 블라우스',
-      '잘 맞는 팬츠와 스커트',
-      '품질 좋은 가죽 신발과 가방',
-      '절제된 액세서리',
-    ],
-    img: ['케이트 미들턴', '조지 클루니', '김희애'],
-    youtube: {
-      name: '썅마이웨이',
-      icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
-      src: 'https://www.youtube.com/embed/am8lwi8UEBQ',
+      name: '피로',
+      link: 'https://www.youtube.com/@Piro7',
+      icon: 'https://yt3.googleusercontent.com/UY3seZF-3dGVHe_5Uu-JeyDMPWNjjNDpoQUbvATWm1Cf0kZHmRYSWPIdBXMbtAKRMEs6j9Gt=s160-c-k-c0x00ffffff-no-rj',
+      src: 'https://youtube.com/embed/x06QNmVqCWg',
     },
   },
   {
     key: 'C',
     title: '캐주얼 스타일',
     description:
-      '편안하면서도 스타일리시한 캐주얼 패션은 당신의 실용적이고 친근한 성격을 잘 보여줍니다. 일상생활에서 활동하기 편하면서도 세련된 느낌을 주는 이 스타일은 다양한 상황에 적응할 수 있습니다.',
-    characteristics: [
-      '편안한 청바지와 티셔츠',
-      '가디건과 스웨터',
-      '편안한 신발 (스니커즈, 로퍼)',
-      '실용적인 아우터',
-      '자연스러운 액세서리',
-    ],
+      '꾸민 듯 안꾸민 듯한 느낌을 주는 캐주얼 스타일은 활동성 좋고 편안한 옷을 추구하면서도, 부드러운 인상을 줄 수 있습니다.',
     img: [
-      'https://imgur.com/nWNDKEp.png',
-      'https://imgur.com/a/NSKOgUu.png',
-      'https://imgur.com/a/NSKOgUu.jpg',
+      'c1img.png',
+      'c2img.png',
+      'c3img.png',
     ],
     youtube: {
-      name: '썅마이웨이',
-      icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
-      src: 'https://www.youtube.com/embed/am8lwi8UEBQ',
+      name: '우연',
+      link: 'https://www.youtube.com/@%EC%9A%B0%EC%97%B0%ED%8C%A8%EC%85%98/videos',
+      icon: 'https://yt3.googleusercontent.com/-TBeO87KWUOwZSv87XhdCFFL0URhZjbV7yc7OL8lzRovRQCx0uRvm3koUCM5_dkHy6Cm68keJEg=s160-c-k-c0x00ffffff-no-rj',
+      src: 'https://youtube.com/embed/hzUEvjZ1ZSI',
     },
   },
   {
     key: 'A',
     title: '아메카지 스타일',
     description:
-      '일본식 미국 캐주얼을 의미하는 아메카지 스타일은 당신의 독특한 감각과 빈티지한 매력을 표현하기에 적합합니다. 클래식한 아메리칸 캐주얼에 일본 특유의 세련된 감성을 더한 이 스타일은 편안하면서도 개성 있는 룩을 완성합니다.',
-    characteristics: [
-      '데님 아이템 (청바지, 재킷)',
-      '워크웨어와 밀리터리 요소',
-      '빈티지한 느낌의 아이템',
-      '자연스러운 색상과 소재',
-      '레이어드 스타일링',
+      '일본식 미국 캐주얼을 의미하는 아메카지 스타일은 빈티지한 매력을 표현하기에 적합합니다. 클래식한 아메리칸 캐주얼에 일본 감성을 더한 이 스타일은 편안하고 활동성있으면서도 개성 있는 룩을 완성시켜줍니다.',
+    img: [
+      'a1img.png',
+      'a2img.png',
+      'a3img.png'
     ],
-    img: ['이나영', '정해인', '키무라 타쿠야'],
     youtube: {
-      name: '썅마이웨이',
-      icon: 'https://yt3.googleusercontent.com/A8W1etxLJngZR8ALSFoQMWhXK-DRYhCzIB9lsOVE_2R5zwzaL_MHZXp5kRWJvEvJRnftOGlYhxI=s160-c-k-c0x00ffffff-no-rj',
-      src: 'https://www.youtube.com/embed/am8lwi8UEBQ',
+      name: '코스모쓰 패션한짠',
+      link: 'https://www.youtube.com/@cosmoss_xx/videos',
+      icon: 'https://yt3.googleusercontent.com/ytc/AIdro_kXQZ1I0BOdYdcPq2ovvNVZPRvOdZpHivpeBH9odIoLdg=s160-c-k-c0x00ffffff-no-rj',
+      src: 'https://youtube.com/embed/7jaljlrA_bk',
     },
   },
 ];
