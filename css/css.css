@@ -27,10 +27,18 @@ body {
   margin-left: 3%;
 }
 .title-icon {
-  width: 20%;
-  height: 20%;
   margin-right: 5%;
   object-fit: contain;
+  width: 2vw;
+  border-radius: 10px;
+}
+@media screen and (max-width: 767px) {
+  .title-icon {
+    margin-right: 5%;
+    object-fit: contain;
+    width: 5vw;
+    border-radius: 10px;
+  }
 }
 .title-text {
   font-size: 1.6rem;

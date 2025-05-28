@@ -182,7 +182,11 @@ const resultArr = [
     title: '미니멀 스타일',
     description:
       '절제와 단순함을 추구하는 미니멀 스타일은 깔끔하고, 단정된 이미지를 주기에 가장 적합합니다.',
-    img: ['../m1img.png', '../m2img.png', '../m3img.png'],
+    img: [
+      'https://imgur.com/a/UjyNlmC.png',
+      'https://imgur.com/a/wRnMHFv.png',
+      'https://imgur.com/a/p0wHqZH.png',
+    ],
     youtube: {
       name: '패션튜브삭형',
       link: 'https://www.youtube.com/@%ED%8C%A8%EC%85%98%ED%8A%9C%EB%B8%8C%EC%82%AD%ED%98%95',
@@ -195,7 +199,11 @@ const resultArr = [
     title: '스트릿 스타일',
     description:
       '색깔이 뚜렷한 스트릿 스타일은 다양한 색감과 패턴으로 자신만의 스타일과 개성을 마음껏 뽐낼 수 있습니다.',
-    img: ['../s1img.png', '../s2img.png', '../s3img.png'],
+    img: [
+      'https://imgur.com/a/bzCksjM.png',
+      'https://imgur.com/a/3ktzXGL.png',
+      'https://imgur.com/a/ddHmQ2m.png',
+    ],
     youtube: {
       name: '피로',
       link: 'https://www.youtube.com/@Piro7',
@@ -208,7 +216,11 @@ const resultArr = [
     title: '캐주얼 스타일',
     description:
       '꾸민 듯 안꾸민 듯한 느낌을 주는 캐주얼 스타일은 활동성 좋고 편안한 옷을 추구하면서도, 부드러운 인상을 줄 수 있습니다.',
-    img: ['../c1img.png', '../c2img.png', '../c3img.png'],
+    img: [
+      'https://imgur.com/a/Q56kawB.png',
+      'https://imgur.com/a/QYope2m.png',
+      'https://imgur.com/a/mOyAwxe.png',
+    ],
     youtube: {
       name: '우연',
       link: 'https://www.youtube.com/@%EC%9A%B0%EC%97%B0%ED%8C%A8%EC%85%98/videos',
@@ -221,7 +233,11 @@ const resultArr = [
     title: '아메카지 스타일',
     description:
       '일본식 미국 캐주얼을 의미하는 아메카지 스타일은 빈티지한 매력을 표현하기에 적합합니다. 클래식한 아메리칸 캐주얼에 일본 감성을 더한 이 스타일은 편안하고 활동성있으면서도 개성 있는 룩을 완성시켜줍니다.',
-    img: ['../a1img.png', '../a2img.png', '../a3img.png'],
+    img: [
+      'https://imgur.com/a/jUxV7w8.png',
+      'https://imgur.com/a/alw5bcR.png',
+      'https://imgur.com/a/iSbKDHF.png',
+    ],
     youtube: {
       name: '코스모쓰 패션한짠',
       link: 'https://www.youtube.com/@cosmoss_xx/videos',

@@ -38,10 +38,6 @@
   font-size: 1.2vw;
   font-weight: bold;
 }
-.title-icon {
-  width: 2vw;
-  border-radius: 10px;
-}
 
 .hero-background-image {
   opacity: 0.3; /* 불투명도 0 ~ 1.0*/

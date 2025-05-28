@@ -10,18 +10,18 @@ const mainButton = document.querySelector('.main-button');
 if (startButton) {
   startButton.addEventListener('click', () => {
     window.location.href =
-      'https://csweb.kyonggi.ac.kr/users/202211461/page/test.html';
+      'https://csweb.kyonggi.ac.kr/users/202211461/pages/test.html';
   });
 }
 
 aboutButton.addEventListener('click', () => {
   window.location.href =
-    'https://csweb.kyonggi.ac.kr/users/202211461/page/about.html';
+    'https://csweb.kyonggi.ac.kr/users/202211461/pages/about.html';
 });
 
 mainButton.addEventListener('click', () => {
   window.location.href =
-    'https://csweb.kyonggi.ac.kr/users/202211461/page/index.html';
+    'https://csweb.kyonggi.ac.kr/users/202211461/pages/index.html';
 });
 
 // 모바일 모달 관련 기능
