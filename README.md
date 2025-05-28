@@ -6,12 +6,10 @@
 
 옵션 1️⃣: 로컬에서 실행 (Live Server 확장 사용 권장)
 이 저장소를 클론합니다:
-
-bash
-복사
-편집
+```bash
 git clone https://github.com/seoJing/PersonalFashion.git
 cd your-project
+```
 Live Server 확장을 VS Code에 설치합니다.
 
 index.html 파일을 열고, 우클릭 후 "Open with Live Server" 를 클릭하면 실행됩니다.
