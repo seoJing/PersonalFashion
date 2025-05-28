@@ -8,7 +8,7 @@
 이 저장소를 클론합니다:
 ```bash
 git clone https://github.com/seoJing/PersonalFashion.git
-cd your-project
+cd PersonalFashion
 ```
 Live Server 확장을 VS Code에 설치합니다.
 
