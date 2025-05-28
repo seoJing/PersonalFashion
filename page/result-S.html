@@ -6,11 +6,20 @@
     <meta property="og:title" content="나에게 맞는 스타일은 스트릿이래!" />
     <meta property="og:description" content="너에게 맞는 스타일은 뭐야?" />
     <meta property="og:image" content="ex.jpg" />
-    <meta property="og:url" content="https://ex/pages/result.html" />
+    <meta
+      property="og:url"
+      content="https://csweb.kyonggi.ac.kr/users/202211461/page/result-S"
+    />
     <meta property="og:type" content="website" />
     <title>PersonalFashion/result</title>
-    <link rel="stylesheet" href="../css/css.css" />
-    <link rel="stylesheet" href="../css/result.css" />
+    <link
+      rel="stylesheet"
+      href="https://csweb.kyonggi.ac.kr/users/202211461/css/css.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://csweb.kyonggi.ac.kr/users/202211461/css/result.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css"
@@ -18,59 +27,130 @@
   </head>
   <body>
     <header id="main-header" class="header">
-      <div class="titleDiv">
-        <img class="titleIcon" src="" alt="아이콘" />
-        <span class="titleText">PersonalFashion</span>
+      <div class="title-container">
+        <img class="title-icon" src="./icon.png" alt="아이콘" />
+        <h1 class="title-text">PersonalFashion</h1>
       </div>
-      <div class="headerNavDiv">
-        <button class="mainButton">메인</button>
-        <button class="aboutButton">소개</button>
-      </div>
+      <nav class="header-nav">
+        <button class="main-button pcOnly">메인</button>
+        <button class="about-button pcOnly">소개</button>
+        <button class="mobile-modal-open-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
     </header>
-    <nav id="main-navigation" class="nav">n</nav>
     <section id="main-section" class="section">
       <section class="hero">
-        <span class="heroTitle"></span>
-        <span class="heroDescription"></span>
-        <div class="heroCharacteristics"></div>
-        <div class="swiper">
-          <ul class="swiper-wrapper"></ul>
+        <div class="swiper-container" id="main-container">
+          <div class="swiper-wrapper" id="main-wrapper">
+            <article class="swiper-slide" id="main-slide-second">
+              <h2 class="second-style-title">이런 스타일은 어때요?</h2>
+              <h3 class="second-style-subtitle"></h3>
+              <div class="second-style-img">
+                <div class="second-style-img1">
+                  <img
+                    src="img/img10.png"
+                    alt="이미지1"
+                    class="second-style-image-src1"
+                  />
+                </div>
+                <div class="second-style-img2">
+                  <img
+                    src="img/img11.png"
+                    alt="이미지2"
+                    class="second-style-image-src2"
+                  />
+                </div>
+                <div class="second-style-img3">
+                  <img
+                    src="img/img12.png"
+                    alt="이미지3"
+                    class="second-style-image-src3"
+                  />
+                </div>
+              </div>
+              <p class="second-style-description"></p>
+            </article>
+            <article class="swiper-slide" id="main-slide-first">
+              <h2 class="hero-title">당신과 어울리는 스타일은?</h2>
+              <h3 class="hero-subtitle"></h3>
+              <div class="hero-image">
+                <div class="hero-img1">
+                  <img
+                    src="https://i.imgur.com/nWNDKEp.png"
+                    alt="이미지1"
+                    class="hero-image-src1"
+                  />
+                </div>
+                <div class="hero-img2">
+                  <img
+                    src="img/img11.png"
+                    alt="이미지2"
+                    class="hero-image-src2"
+                  />
+                </div>
+                <div class="hero-img3">
+                  <img
+                    src="img/img12.png"
+                    alt="이미지3"
+                    class="hero-image-src3"
+                  />
+                </div>
+              </div>
+              <p class="hero-description"></p>
+            </article>
+            <article class="swiper-slide" id="main-slide-youtube">
+              <div class="youtube-container">
+                <h2 class="youtube-title">스타일과 관련된 유튜버</h2>
+                <div class="youtube-icon-container">
+                  <img class="youtube-icon" src="" alt="유튜버 아이콘" />
+                </div>
+                <h3 class="youtube-name">유튜브 이름</h3>
+                <iframe
+                  class="youtube-video"
+                  src=""
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </article>
+          </div>
         </div>
-        <img src="" alt="" class="heroImg1" />
-        <img src="" alt="" class="heroImg2" />
-        <img src="" alt="" class="heroImg3" />
-        <button class="restartButton">다시하기</button>
-        <button class="shareButton">공유하기</button>
-      </section>
-      <section class="moreInformation">
-        <div class="secondStyleDiv">
-          <span class="secondStyleTitle">이런 스타일은 어때요?</span>
-          <span class="secondStyleSubtitle"></span>
-          <img class="secondStyleImg" src="" alt="2번째스타일이미지" />
-        </div>
-        <div class="leastStyleDiv">
-          <span class="leastStyleTitle">나와 상극인 스타일</span>
-          <span class="leastStyleSubtitle"></span>
-          <img class="leastStyleImg" src="" alt="상극스타일이미지" />
-        </div>
-        <div class="mbtiDiv">
-          <span class="mbtiTitle">스타일이 추구하는 mbti</span>
-          <span class="mbtiSubtitle1"></span>
-          <img class="mbtiImg1" src="" alt="추구mbti1" />
-          <span class="mbtiDescription1"></span>
-          <span class="mbtiSubtitle2"></span>
-          <img class="mbtiImg2" src="" alt="추구mbti2" />
-          <span class="mbtiDescription2"></span>
+        <div class="hero-box">
+          <div class="button-container">
+            <button class="restart-button">다시하기</button>
+            <button class="share-button">공유하기</button>
+          </div>
         </div>
       </section>
     </section>
-    <aside id="main-aside" class="aside">a</aside>
-    <footer id="main-footer" class="footer">f</footer>
-
-    <script type="module" src="../js/result.js"></script>
+    <footer id="main-footer" class="footer">
+      <section>
+        <h4 class="team-list">조원 목록</h4>
+        <p class="team-leader">조장 : 202211461 서진규</p>
+        <p class="team-members">
+          조원 : 202211412 김동현<br />
+          조원 : 202211549 황호찬
+        </p>
+      </section>
+    </footer>
+    <div class="mobile-modal-overlay">
+      <div class="mobile-modal" role="dialog" aria-modal="true">
+        <button class="mobile-modal-main-button">메인</button>
+        <button class="mobile-modal-about-button">소개</button>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script
       type="module"
-      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"
+      src="https://csweb.kyonggi.ac.kr/users/202211461/js/result.js"
+    ></script>
+    <script
+      type="module"
+      src="https://csweb.kyonggi.ac.kr/users/202211461/js/index.js"
     ></script>
   </body>
 </html>
