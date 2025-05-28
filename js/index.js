@@ -9,16 +9,16 @@ const mainButton = document.querySelector('.main-button');
 // 페이지 이동 이벤트 설정
 if (startButton) {
   startButton.addEventListener('click', () => {
-    window.location.href = './test.html';
+    window.location.href = '../page/test.html';
   });
 }
 
 aboutButton.addEventListener('click', () => {
-  window.location.href = './about.html';
+  window.location.href = '../page/about.html';
 });
 
 mainButton.addEventListener('click', () => {
-  window.location.href = './index.html';
+  window.location.href = '../page/index.html';
 });
 
 // 모바일 모달 관련 기능

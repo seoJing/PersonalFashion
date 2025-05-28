@@ -136,7 +136,7 @@ function updateResultSlide() {
       );
 
       // 결과 데이터를 URL 매개변수로 전달
-      window.location.href = `./result.html?data=${btoa(
+      window.location.href = `../page/result.html?data=${btoa(
         JSON.stringify(recomendStyleArr)
       )}`;
     });

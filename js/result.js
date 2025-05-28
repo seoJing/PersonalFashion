@@ -9,7 +9,6 @@ const heroImageSrc1 = document.querySelector('.hero-img1 img');
 const heroImageSrc2 = document.querySelector('.hero-img2 img');
 const heroImageSrc3 = document.querySelector('.hero-img3 img');
 
-
 const restartButton = document.querySelector('.restart-button');
 const shareButton = document.querySelector('.share-button');
 
@@ -18,10 +17,9 @@ const secondStyleDescription = document.querySelector(
   '.second-style-description'
 );
 
-const secondStyleImageSrc1 = document.querySelector('.second-style-img1 img'); 
-const secondStyleImageSrc2 = document.querySelector('.second-style-img2 img'); 
-const secondStyleImageSrc3 = document.querySelector('.second-style-img3 img'); 
-
+const secondStyleImageSrc1 = document.querySelector('.second-style-img1 img');
+const secondStyleImageSrc2 = document.querySelector('.second-style-img2 img');
+const secondStyleImageSrc3 = document.querySelector('.second-style-img3 img');
 
 const youtubeTitle = document.querySelector('.youtube-title');
 const youtubeName = document.querySelector('.youtube-name');
@@ -71,7 +69,6 @@ function loadResultData() {
   setupButtons(firstRecomendStyle, decodeData);
 }
 
-
 function setFirstStyleContent(style) {
   document.querySelector('.hero-title').innerText = '당신과 어울리는 스타일은?';
   heroSubtitle.innerText = style.title;
@@ -83,7 +80,8 @@ function setFirstStyleContent(style) {
 }
 
 function setSecondStyleContent(style) {
-  document.querySelector('.second-style-title').innerText = '이런 스타일은 어때요?';
+  document.querySelector('.second-style-title').innerText =
+    '이런 스타일은 어때요?';
   secondStyleSubtitle.innerText = style.title;
   secondStyleImageSrc1.src = style.img[0];
   secondStyleImageSrc2.src = style.img[1];
@@ -106,7 +104,7 @@ function setYoutubeContent(style) {
 function setupButtons(style, data) {
   // 다시하기 버튼
   restartButton.addEventListener('click', () => {
-    window.location.href = './index.html';
+    window.location.href = '../index.html';
   });
 
   // 공유하기 버튼
@@ -144,7 +142,7 @@ function moblieRandering() {
   // 모바일에서 슬라이드 순서를 1-2-3으로 재배치
   if (mainWrapper && mainSlideFirst && mainSlideSecond && mainSlideYoutube) {
     mainWrapper.innerHTML = '';
-    mainWrapper.appendChild(mainSlideFirst); 
+    mainWrapper.appendChild(mainSlideFirst);
     mainWrapper.appendChild(mainSlideSecond);
     mainWrapper.appendChild(mainSlideYoutube);
   }
