@@ -14,7 +14,7 @@ Live Server 확장을 VS Code에 설치합니다.
 
 index.html 파일을 열고, 우클릭 후 "Open with Live Server" 를 클릭하면 실행됩니다.
 
-옵션 2️⃣: 온라인에서 실행 (학교 호스팅 서비스 이용)
+옵션 2️⃣: (!!!!적극 권장!!!!)온라인에서 실행 (학교 호스팅 서비스 이용)
 프로젝트는 학교 제공 호스팅인 CSWEB에서도 확인할 수 있습니다:
 
 👉 https://csweb.kyonggi.ac.kr/users/202211461/
