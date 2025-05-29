@@ -8,6 +8,9 @@ const heroDescription = document.querySelector('.hero-description');
 const heroImageSrc1 = document.querySelector('.hero-img1 img');
 const heroImageSrc2 = document.querySelector('.hero-img2 img');
 const heroImageSrc3 = document.querySelector('.hero-img3 img');
+const heroImageA1 = document.querySelector('.hero-img1 a');
+const heroImageA2 = document.querySelector('.hero-img2 a');
+const heroImageA3 = document.querySelector('.hero-img3 a');
 
 const restartButton = document.querySelector('.restart-button');
 const shareButton = document.querySelector('.share-button');
@@ -20,6 +23,9 @@ const secondStyleDescription = document.querySelector(
 const secondStyleImageSrc1 = document.querySelector('.second-style-img1 img');
 const secondStyleImageSrc2 = document.querySelector('.second-style-img2 img');
 const secondStyleImageSrc3 = document.querySelector('.second-style-img3 img');
+const secondStyleImageA1 = document.querySelector('.second-style-img1 a');
+const secondStyleImageA2 = document.querySelector('.second-style-img2 a');
+const secondStyleImageA3 = document.querySelector('.second-style-img3 a');
 
 const youtubeTitle = document.querySelector('.youtube-title');
 const youtubeName = document.querySelector('.youtube-name');
@@ -74,6 +80,10 @@ function setFirstStyleContent(style) {
   heroSubtitle.innerText = style.title;
   heroDescription.innerText = style.description;
 
+  heroImageA1.href = style.img[0];
+  heroImageA2.href = style.img[1];
+  heroImageA3.href = style.img[2];
+
   heroImageSrc1.src = style.img[0];
   heroImageSrc2.src = style.img[1];
   heroImageSrc3.src = style.img[2];
@@ -83,9 +93,15 @@ function setSecondStyleContent(style) {
   document.querySelector('.second-style-title').innerText =
     '이런 스타일은 어때요?';
   secondStyleSubtitle.innerText = style.title;
+
   secondStyleImageSrc1.src = style.img[0];
   secondStyleImageSrc2.src = style.img[1];
   secondStyleImageSrc3.src = style.img[2];
+
+  secondStyleImageA1.href = style.img[0];
+  secondStyleImageA2.href = style.img[1];
+  secondStyleImageA3.href = style.img[2];
+
   secondStyleDescription.innerText = style.description;
 }
 
