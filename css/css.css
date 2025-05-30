@@ -7,8 +7,7 @@ body {
   background-color: #f8f9fa;
   color: #333;
 }
-
-/*헤더 시작*/
+/* 헤더 */
 .header {
   width: 100%;
   height: 10%;
@@ -20,7 +19,6 @@ body {
   z-index: 100;
   position: relative;
 }
-
 .title-container {
   display: flex;
   align-items: center;
@@ -56,44 +54,10 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
 }
-
-@media screen and(max-width: 959px) {
-  .pcOnly {
-    display: none;
-  }
-}
-
 .header-nav button:hover {
   background-color: #0b5b5a;
   transform: translateY(-2px);
 }
-
-/* 모바일 모달 버튼 스타일 */
-.mobile-modal-open-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 22px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 1000;
-  margin-right: 5%;
-}
-
-.mobile-modal-open-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-  margin: 2px 0;
-}
-/*여기까지 헤더*/
-
 /* 메인 콘텐츠 */
 .section {
   height: 80vh;
@@ -123,15 +87,66 @@ body {
   font-size: 0.8rem;
 }
 
+
+/* 모바일 모달 버튼 스타일 */
+.mobile-modal-open-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1000;
+  margin-right: 5%;
+}
+
+.mobile-modal-open-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  margin: 2px 0;
+}
+
+.mobile-modal-main-button,
+.mobile-modal-about-button {
+  flex: 1 auto;
+  width:80%;
+  padding: 3% 0;
+  align-items:center;
+  background-color: #20c997;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 3.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-modal-main-button:hover,
+.mobile-modal-about-button:hover {
+  background-color: #17a589;
+  color: black;
+}
+
 .mobile-modal {
   background: white;
-  height: 20%;
+  height: 25%;
   width: 100%;
   padding: 5%;
   z-index: 10;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  align-items:center;
   width: 90%;
   gap: 5%;
 }
@@ -144,4 +159,20 @@ body {
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
+}
+
+@media screen and(max-width: 959px) {
+  .mobile-modal {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+  }
+  .mobile-modal-main-button,
+  .mobile-modal-about-button {
+    max-width: 50%;
+    width: 50%;
+  }
+  .pcOnly {
+    display: none;
+  }
 }
