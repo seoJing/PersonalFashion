@@ -21,7 +21,7 @@ aboutButton.addEventListener('click', () => {
 
 mainButton.addEventListener('click', () => {
   window.location.href =
-    'https://csweb.kyonggi.ac.kr/users/202211461/pages/index.html';
+    'https://csweb.kyonggi.ac.kr/users/202211461/index.html';
 });
 
 // 모바일 모달 관련 기능
