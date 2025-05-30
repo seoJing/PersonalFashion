@@ -10,7 +10,15 @@
     />
     <link
       rel="stylesheet"
-      href="https://csweb.kyonggi.ac.kr/users/202211461/css/index.css"
+      href="https://csweb.kyonggi.ac.kr/users/202211461/css/result.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css"
+      rel="stylesheet"
     />
   </head>
   <body>
@@ -33,28 +41,87 @@
         </button>
       </nav>
     </header>
+
     <section id="main-section" class="section">
-      <section class="hero">
-        <iframe
-          class="youtube-video"
-          src="https://www.youtube.com/embed/R3qY2GHHErY?autoplay=1&mute=1"
-          frameborder="0"
-          allow="autoplay; fullscreen"
-          allowfullscreen
-        ></iframe>
-        <button class="start-button">시작하기</button>
-      </section>
+      <div class="hero">
+        <div id="right">
+          <iframe
+            class="youtube-video"
+            src="https://www.youtube.com/embed/R3qY2GHHErY?autoplay=0&mute=1"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
+
+          <div class="project-intro">
+            <h2 class="project-title">개인 맞춤형 스타일 추천</h2>
+            <p class="project-description">
+              사용자의 체형, 취향, 분위기 등에 적절히 어울리는 스타일 조합을
+              찾아주는 개인 맞춤형 스타일 추천 서비스입니다. 단순한 유행 기반이
+              아닌, 당신만을 위한 특별한 패션을 제안합니다.
+            </p>
+          </div>
+
+          <button class="start-button" onclick="startSurvey()">시작하기</button>
+        </div>
+
+        <div id="left">
+          <div class="team-section">
+            <h4 class="team-title">개발팀</h4>
+            <div class="team-member">
+              <strong>조장:</strong> 202211461 서진규
+            </div>
+            <div class="team-member">
+              <strong>조원:</strong> 202211412 김동현
+            </div>
+            <div class="team-member">
+              <strong>조원:</strong> 202211549 황호찬
+            </div>
+          </div>
+
+          <div class="links-section">
+            <h4 class="links-title">프로젝트 정보</h4>
+            <a
+              href="https://github.com/seoJing/PersonalFashion"
+              class="github-link"
+              target="_blank"
+            >
+              📚 GitHub 저장소
+            </a>
+            <a
+              href="https://csweb.kyonggi.ac.kr/users/202211461/"
+              class="demo-link"
+              target="_blank"
+            >
+              🚀 라이브 데모
+            </a>
+          </div>
+
+          <div class="dev-info">
+            <h4>기술 스택</h4>
+            <p>HTML5, CSS3, JavaScript<br />반응형 웹 디자인</p>
+
+            <h4 style="margin-top: 1rem">개발 기간</h4>
+            <p>2025.03 ~ 2025.06</p>
+
+            <h4 style="margin-top: 1rem">주요 특징</h4>
+            <p>SPA 구조 + 정적 HTML 하이브리드<br />개인 맞춤형 알고리즘</p>
+          </div>
+        </div>
+      </div>
     </section>
+
     <footer id="main-footer" class="footer">
       <section>
-        <h4 class="team-list">조원 목록</h4>
+        <h4 class="team-list">한국인공지능융합기술학회 2025 춘계 학술대회</h4>
         <p class="team">
-          조장 : 202211461 서진규 <br />
-          조원 : 202211412 김동현 <br />
+          조장 : 202211461 서진규<br />
+          조원 : 202211412 김동현<br />
           조원 : 202211549 황호찬
         </p>
       </section>
     </footer>
+
     <div class="mobile-modal-overlay">
       <div class="mobile-modal" role="dialog" aria-modal="true">
         <button class="mobile-modal-main-button">메인</button>
@@ -65,6 +132,5 @@
       type="module"
       src="https://csweb.kyonggi.ac.kr/users/202211461/js/index.js"
     ></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>

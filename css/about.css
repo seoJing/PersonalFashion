@@ -1,60 +1,248 @@
-/* 시작하기 버튼 */
-.start-button {
-  padding: 3% 5%;
-  background-color: #20c997;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  font-size: 1.9rem;
-  font-weight: bold;
-  cursor: pointer;
-  justify-content: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  left: 50%;
-  bottom: 5%;
-  transform: translateX(-50%);
+.section {
+  overflow: hidden;
 }
-.start-button:hover {
-  background-color: #17a589;
-  color: black;
-}
+
 .hero {
   height: 100%;
   display: flex;
+  width: 100%;
+}
+
+#right {
+  width: 70%;
+  float: left;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  background-color: #ffffff;
+  position: relative;
 }
+
+#left {
+  width: 30%;
+  float: right;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-left: 2px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
 .youtube-video {
-  min-width: 120vw;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
-.mobile-modal-main-button,
-.mobile-modal-about-button {
-  flex: 1 1 auto;
-  padding: 3% 0;
+
+.project-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.start-button {
+  padding: 1rem 2rem;
   background-color: #20c997;
   color: #fff;
   border: none;
-  border-radius: 20px;
-  font-size: 1.7rem;
+  border-radius: 25px;
+  font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
-  text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(32, 201, 151, 0.3);
 }
 
-.mobile-modal-main-button:hover,
-.mobile-modal-about-button:hover {
+.start-button:hover {
   background-color: #17a589;
-  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(32, 201, 151, 0.4);
 }
 
-@media (max-width: 767px) {
+.team-section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.team-member {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.links-section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.links-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.github-link {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #343a40;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.github-link:hover {
+  background-color: #495057;
+  transform: translateY(-2px);
+}
+
+.demo-link {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.demo-link:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.dev-info {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dev-info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.dev-info p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #343a40;
+  color: #ffffff;
+  clear: both;
+  display: flex;
+  justify-content: left;
+  position: relative;
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+.footer > section {
+  margin-left: 2%;
+}
+
+.footer > section > h4 {
+  font-size: 1.2rem;
+}
+
+.footer > section > p {
+  font-size: 0.8rem;
+}
+
+/* 반응형 - 모바일 */
+@media screen and (max-width: 767px) {
+  .title-icon {
+    width: 5vw;
+  }
+
+  .pcOnly {
+    display: none !important;
+  }
+
+  .mobile-modal-open-button {
+    display: flex;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  #right {
+    width: 100%;
+    float: none;
+    order: 1;
+    padding: 1.5rem;
+  }
+
+  #left {
+    width: 100%;
+    float: none;
+    order: 2;
+    border-left: none;
+    border-top: 2px solid #dee2e6;
+    padding: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .youtube-video {
+    height: 250px;
+  }
+
   .mobile-modal {
     flex-direction: column;
     align-items: center;
@@ -65,5 +253,28 @@
   .mobile-modal-about-button {
     max-width: 80%;
     width: 80%;
+  }
+}
+
+/* 반응형 - 태블릿 */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .pcOnly {
+    display: none !important;
+  }
+
+  .mobile-modal-open-button {
+    display: flex;
+  }
+
+  #right {
+    width: 65%;
+  }
+
+  #left {
+    width: 35%;
+  }
+
+  .project-title {
+    font-size: 2.2rem;
   }
 }
