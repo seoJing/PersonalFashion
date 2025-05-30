@@ -20,7 +20,18 @@
   background-color: #17a589;
   color: black;
 }
-
+.hero {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.youtube-video {
+  min-width: 120vw;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 .mobile-modal-main-button,
 .mobile-modal-about-button {
   flex: 1 1 auto;
