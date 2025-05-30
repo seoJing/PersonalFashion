@@ -40,15 +40,12 @@ index.html 파일을 열고, 우클릭 후 "Open with Live Server" 를 클릭하
 <table> 
     <tr> 
         <td align="center">
-            <img src="깃허브_프로필_URL" width="100"/><br/> 
             <sub><b>서진규(조장, 프론트엔드)</b></sub> 
         </td> 
         <td align="center"> 
-            <img src="깃허브_프로필_URL" width="100"/><br/> 
             <sub><b>김동현(프론트엔드, 디자인)</b></sub> 
         </td>
         <td align="center"> 
-            <img src="깃허브_프로필_URL" width="100"/><br/> 
             <sub><b>황호찬(테크니컬 라이터)</b></sub> 
         </td> 
     </tr> 
