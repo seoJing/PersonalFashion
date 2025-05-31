@@ -1,12 +1,13 @@
-// 모바일 여부 확인 (화면 크기 고려)
-export const isMobile = window.innerWidth <= 959 ? true : false; // 959px 이하를 모바일로 간주
+// 모바일 여부 확인 함수
+const checkIsMobile = () => window.innerWidth <= 959;
+export let isMobile = checkIsMobile();
 
 // 버튼 요소 선택
 const startButton = document.querySelector('.start-button');
 const aboutButton = document.querySelector('.about-button');
 const mainButton = document.querySelector('.main-button');
 
-// 페이지 이동 이벤트 설정
+// 페이지 이동 이벤트 설정 (한 번만 설정)
 if (startButton) {
   startButton.addEventListener('click', () => {
     window.location.href =
@@ -14,17 +15,21 @@ if (startButton) {
   });
 }
 
-aboutButton.addEventListener('click', () => {
-  window.location.href =
-    'https://csweb.kyonggi.ac.kr/users/202211461/pages/about.html';
-});
+if (aboutButton) {
+  aboutButton.addEventListener('click', () => {
+    window.location.href =
+      'https://csweb.kyonggi.ac.kr/users/202211461/pages/about.html';
+  });
+}
 
-mainButton.addEventListener('click', () => {
-  window.location.href =
-    'https://csweb.kyonggi.ac.kr/users/202211461/index.html';
-});
+if (mainButton) {
+  mainButton.addEventListener('click', () => {
+    window.location.href =
+      'https://csweb.kyonggi.ac.kr/users/202211461/index.html';
+  });
+}
 
-// 모바일 모달 관련 기능
+// jQuery 요소 선택
 const $mobileModalOverlay = $('.mobile-modal-overlay');
 const $aboutButton = $('.about-button');
 const $mainButton = $('.main-button');
@@ -33,39 +38,80 @@ const $mobileModalCloseButton = $('.mobile-modal-close-button');
 const $mobileModalMainButton = $('.mobile-modal-main-button');
 const $mobileModalAboutButton = $('.mobile-modal-about-button');
 
-if (isMobile) {
-  // 모바일 환경 설정
-  $aboutButton.hide();
-  $mainButton.hide();
-  $mobileModalOpenButton.show();
+// 모바일 모달 이벤트 (한 번만 설정)
+let modalEventsSet = false;
+
+const setupMobileModalEvents = () => {
+  if (modalEventsSet) return;
 
   // 모달 열기
   $mobileModalOpenButton.on('click', () => {
     $mobileModalCloseButton.show();
     $mobileModalMainButton.show();
     $mobileModalAboutButton.show();
-    $mobileModalOverlay.fadeIn(); // 오버레이 전체 보여줌
+    $mobileModalOverlay.fadeIn();
   });
 
   // 모달 닫기 (닫기 버튼)
   $mobileModalCloseButton.on('click', () => {
     $mobileModalOverlay.fadeOut();
   });
-  // 오버레이 클릭 시 모달 닫기 (모달 내부 클릭은 무시)
+
+  // 오버레이 클릭 시 모달 닫기
   $mobileModalOverlay.on('click', (e) => {
     if (!$(e.target).closest('.mobile-modal').length) {
       $mobileModalOverlay.fadeOut();
     }
   });
+
   // 모달 내 버튼 이벤트
   $mobileModalMainButton.on('click', () => {
-    window.location.href = './index.html';
+    window.location.href =
+      'https://csweb.kyonggi.ac.kr/users/202211461/index.html';
   });
 
   $mobileModalAboutButton.on('click', () => {
-    window.location.href = './about.html';
+    window.location.href =
+      'https://csweb.kyonggi.ac.kr/users/202211461/pages/about.html';
   });
-} else {
-  // 데스크톱 환경 설정
-  $mobileModalOpenButton.hide();
-}
+
+  modalEventsSet = true;
+};
+
+// UI 업데이트 함수
+const updateUI = () => {
+  isMobile = checkIsMobile();
+  if (isMobile) {
+    // 모바일 환경 설정
+    $aboutButton.hide();
+    $mainButton.hide();
+    $mobileModalOpenButton.show();
+
+    // 모바일 모달 이벤트 설정 (처음 한 번만)
+    setupMobileModalEvents();
+  } else {
+    // 데스크톱 환경 설정
+    $aboutButton.show();
+    $mainButton.show();
+    $mobileModalOpenButton.hide();
+
+    // 모바일 모달이 열려있다면 닫기
+    $mobileModalOverlay.hide();
+  }
+};
+
+updateUI();
+
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    updateUI();
+  }, 100);
+});
+
+window.addEventListener('orientationchange', () => {
+  setTimeout(() => {
+    updateUI();
+  }, 200);
+});

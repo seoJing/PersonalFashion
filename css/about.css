@@ -116,10 +116,10 @@
   text-align: center;
 }
 
-.github-link {
-  display: inline-block;
+.github-link,
+.demo-link {
+  display: block;
   padding: 0.8rem 1.5rem;
-  background-color: #343a40;
   color: white;
   text-decoration: none;
   border-radius: 20px;
@@ -127,6 +127,12 @@
   transition: all 0.3s ease;
   text-align: center;
   width: 100%;
+  box-sizing: border-box; /* 이게 핵심! padding이 width에 포함됨 */
+  margin-bottom: 0.5rem;
+}
+
+.github-link {
+  background-color: #343a40;
 }
 
 .github-link:hover {
@@ -135,17 +141,7 @@
 }
 
 .demo-link {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
   background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  text-align: center;
-  width: 100%;
-  margin-top: 0.5rem;
 }
 
 .demo-link:hover {
@@ -172,63 +168,33 @@
   line-height: 1.4;
 }
 
-.footer {
-  width: 100%;
-  height: auto;
-  background-color: #343a40;
-  color: #ffffff;
-  clear: both;
-  display: flex;
-  justify-content: left;
-  position: relative;
-  z-index: 100;
-  padding: 1rem 0;
-}
-
-.footer > section {
-  margin-left: 2%;
-}
-
-.footer > section > h4 {
-  font-size: 1.2rem;
-}
-
-.footer > section > p {
-  font-size: 0.8rem;
-}
-
-/* 반응형 - 모바일 */
-@media screen and (max-width: 767px) {
-  .title-icon {
-    width: 5vw;
-  }
-
-  .pcOnly {
-    display: none !important;
-  }
-
-  .mobile-modal-open-button {
-    display: flex;
+@media screen and (max-width: 959px) {
+  .section {
+    height: auto;
+    min-height: calc(100vh - 10% - 60px);
+    overflow: visible;
   }
 
   .hero {
     flex-direction: column;
+    align-items: center;
   }
 
   #right {
-    width: 100%;
+    width: 85%;
     float: none;
     order: 1;
     padding: 1.5rem;
   }
 
   #left {
-    width: 100%;
+    width: 85%;
     float: none;
     order: 2;
     border-left: none;
     border-top: 2px solid #dee2e6;
     padding: 1.5rem;
+    gap: 1rem;
   }
 
   .project-title {
@@ -237,44 +203,33 @@
 
   .project-description {
     font-size: 1rem;
+    line-height: 1.5;
   }
 
   .youtube-video {
     height: 250px;
+    margin-bottom: 1.5rem;
   }
 
-  .mobile-modal {
-    flex-direction: column;
-    align-items: center;
-    gap: 2vh;
+  .start-button {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
   }
 
-  .mobile-modal-main-button,
-  .mobile-modal-about-button {
-    max-width: 80%;
-    width: 80%;
-  }
-}
-
-/* 반응형 - 태블릿 */
-@media screen and (min-width: 768px) and (max-width: 959px) {
-  .pcOnly {
-    display: none !important;
+  .team-section,
+  .links-section,
+  .dev-info {
+    padding: 1rem;
   }
 
-  .mobile-modal-open-button {
-    display: flex;
+  .team-title,
+  .links-title {
+    font-size: 1.1rem;
   }
 
-  #right {
-    width: 65%;
-  }
-
-  #left {
-    width: 35%;
-  }
-
-  .project-title {
-    font-size: 2.2rem;
+  .github-link,
+  .demo-link {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
   }
 }
