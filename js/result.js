@@ -125,7 +125,7 @@ function setupButtons(style, data) {
 
   // 공유하기 버튼
   shareButton.addEventListener('click', () => {
-    const shareUrl = `http://csweb.kyonggi.ac.kr/users/202211461/pages/result-${
+    const shareUrl = `https://csweb.kyonggi.ac.kr/users/202211461/pages/result-${
       style.key
     }.html?data=${btoa(JSON.stringify(data))}`;
 

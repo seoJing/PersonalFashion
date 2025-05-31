@@ -11,21 +11,21 @@ const mainButton = document.querySelector('.main-button');
 if (startButton) {
   startButton.addEventListener('click', () => {
     window.location.href =
-      'http://csweb.kyonggi.ac.kr/users/202211461/pages/test.html';
+      'https://csweb.kyonggi.ac.kr/users/202211461/pages/test.html';
   });
 }
 
 if (aboutButton) {
   aboutButton.addEventListener('click', () => {
     window.location.href =
-      'http://csweb.kyonggi.ac.kr/users/202211461/pages/about.html';
+      'https://csweb.kyonggi.ac.kr/users/202211461/pages/about.html';
   });
 }
 
 if (mainButton) {
   mainButton.addEventListener('click', () => {
     window.location.href =
-      'http://csweb.kyonggi.ac.kr/users/202211461/index.html';
+      'https://csweb.kyonggi.ac.kr/users/202211461/index.html';
   });
 }
 
@@ -67,12 +67,12 @@ const setupMobileModalEvents = () => {
   // 모달 내 버튼 이벤트
   $mobileModalMainButton.on('click', () => {
     window.location.href =
-      'http://csweb.kyonggi.ac.kr/users/202211461/index.html';
+      'https://csweb.kyonggi.ac.kr/users/202211461/index.html';
   });
 
   $mobileModalAboutButton.on('click', () => {
     window.location.href =
-      'http://csweb.kyonggi.ac.kr/users/202211461/pages/about.html';
+      'https://csweb.kyonggi.ac.kr/users/202211461/pages/about.html';
   });
 
   modalEventsSet = true;
